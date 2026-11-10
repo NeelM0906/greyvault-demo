@@ -1,0 +1,167 @@
+{
+  "site": {
+    "url": "https://greyvault.example",
+    "basePath": "/",
+    "lang": "en-US",
+    "currency": "USD",
+    "demo": true
+  },
+  "brand": {
+    "name": "GreyVault",
+    "legalName": "GreyVault Timepieces LLC",
+    "tagline": "Pre-owned Rolex, Audemars Piguet and Patek Philippe, inspected on 47th Street.",
+    "description": "An independent New York dealer of authenticated pre-owned watches. Every piece opened, measured and documented by a watchmaker before it is listed.",
+    "founded": 2009,
+    "instagram": "greyvault.nyc",
+    "monogram": "GV"
+  },
+  "colors": {
+    "ink": "#121212",
+    "ivory": "#F7F5F1",
+    "paper": "#EFEBE4",
+    "line": "#DCD6CC",
+    "muted": "#5C5852",
+    "steel": "#8A929B",
+    "accent": "#3E4A57"
+  },
+  "contact": {
+    "phone": "+1 212 555 0147",
+    "phoneHref": "+12125550147",
+    "whatsapp": "12125550147",
+    "email": "desk@greyvault.example",
+    "street": "47 West 47th Street, Booth 12",
+    "suite": "Ground floor exchange",
+    "city": "New York",
+    "region": "NY",
+    "postal": "10036",
+    "country": "US",
+    "lat": 40.7573,
+    "lng": -73.9806,
+    "directions": "Between Fifth and Sixth Avenue, north side. Enter the exchange and ask the lobby desk for Booth 12. Bring a photo ID.",
+    "mapUrl": "https://maps.google.com/?q=47+West+47th+Street+New+York+NY+10036"
+  },
+  "hours": [
+    {
+      "day": "Monday",
+      "open": "10:00",
+      "close": "18:00"
+    },
+    {
+      "day": "Tuesday",
+      "open": "10:00",
+      "close": "18:00"
+    },
+    {
+      "day": "Wednesday",
+      "open": "10:00",
+      "close": "18:00"
+    },
+    {
+      "day": "Thursday",
+      "open": "10:00",
+      "close": "18:00"
+    },
+    {
+      "day": "Friday",
+      "open": "10:00",
+      "close": "14:00"
+    },
+    {
+      "day": "Saturday",
+      "open": null,
+      "close": null,
+      "note": "Closed"
+    },
+    {
+      "day": "Sunday",
+      "open": null,
+      "close": null,
+      "note": "By appointment"
+    }
+  ],
+  "policies": {
+    "warrantyYears": 2,
+    "returnDays": 7,
+    "holdHours": 24,
+    "insuredShipping": "Free insured overnight shipping in the US. FedEx Priority, signature required, fully insured door to door.",
+    "international": "International shipping on request, insured, duties paid by the buyer."
+  },
+  "pricing": {
+    "mode": "listed",
+    "requestLabel": "Price on request"
+  },
+  "payments": [
+    {
+      "name": "Bank wire",
+      "note": "Preferred. No fee. Released on receipt of funds."
+    },
+    {
+      "name": "Certified check or cash",
+      "note": "In person at the booth. Cash subject to federal reporting."
+    },
+    {
+      "name": "Credit card",
+      "note": "Up to $15,000 per watch. 3% processing fee."
+    },
+    {
+      "name": "Financing",
+      "note": "6 to 24 month plans through a licensed lending partner, subject to approval. Demo partner shown."
+    },
+    {
+      "name": "Trade-in",
+      "note": "Put a watch you own toward any piece. We quote within one business day."
+    }
+  ],
+  "team": [
+    {
+      "name": "Daniel Hakimi",
+      "role": "Founder",
+      "since": 2009,
+      "bio": "Grew up on the street working his father's booth. Buys every watch personally and answers the WhatsApp line most evenings."
+    },
+    {
+      "name": "Maya Rosen",
+      "role": "Head watchmaker",
+      "since": 2014,
+      "bio": "WOSTEP-trained. Opens, measures and signs off on every piece before it is listed. Writes the condition reports."
+    },
+    {
+      "name": "Sam Okafor",
+      "role": "Client advisor",
+      "since": 2018,
+      "bio": "Handles sourcing requests, trade-ins and appointments. Ask him for anything not on the site."
+    },
+    {
+      "name": "Elena Petrova",
+      "role": "Operations",
+      "since": 2020,
+      "bio": "Runs paperwork, insurance and shipping. Every parcel leaves with her checklist."
+    }
+  ],
+  "reviews": {
+    "rating": 4.9,
+    "count": 312,
+    "source": "Google",
+    "items": [
+      {
+        "quote": "Maya walked me through the timegrapher readout before I paid. No pressure, no games.",
+        "author": "J. Alvarez",
+        "piece": "GMT-Master II"
+      },
+      {
+        "quote": "Traded my Datejust toward a Royal Oak. Fair number, done in one visit.",
+        "author": "R. Chen",
+        "piece": "Royal Oak 15500"
+      },
+      {
+        "quote": "Bought sight unseen from Chicago. The condition report matched the watch exactly.",
+        "author": "M. Brooks",
+        "piece": "Submariner Date"
+      }
+    ]
+  },
+  "forms": {
+    "endpoint": "",
+    "storageKey": "gv:leads"
+  }
+}

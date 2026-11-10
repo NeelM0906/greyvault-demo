@@ -1,0 +1,15 @@
+{
+  "name": "GreyVault",
+  "short_name": "GreyVault",
+  "start_url": "./index.html",
+  "display": "browser",
+  "background_color": "#F7F5F1",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
