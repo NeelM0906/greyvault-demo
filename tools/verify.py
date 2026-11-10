@@ -32,7 +32,7 @@ threading.Thread(target=srv.serve_forever, daemon=True).start()
 BASE = f'http://127.0.0.1:{args.port}/'
 
 pages = sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('*.html')) + sorted(str(p.relative_to(ROOT)) for p in ROOT.glob('product/*.html'))
-key_pages = [p for p in pages if not p.startswith('product/')] + ['product/rolex-gmt-master-ii-126710blro-2023.html', 'product/rolex-daytona-126500ln-2023.html']
+key_pages = [p for p in pages if not p.startswith('product/')] + ['product/rolex-gmt-master-ii-16710.html', 'product/patek-nautilus-5711-1a-010.html']
 results = {'pages': {}, 'tests': [], 'axe': {}}
 fails = []
 
@@ -100,21 +100,21 @@ with sync_playwright() as p:
 
     page.goto(BASE + 'inventory.html?brand=Rolex')
     cards = visible_cards()
-    check('filter by brand from URL', len(cards) == 11 and all(c['brand'] == 'Rolex' for c in cards), f'{len(cards)} cards')
-    check('result count announces filtered total', page.text_content('[data-result-count]') == '11 watches', page.text_content('[data-result-count]'))
+    check('filter by brand from URL', len(cards) == 12 and all(c['brand'] == 'Rolex' for c in cards), f'{len(cards)} cards')
+    check('result count announces filtered total', page.text_content('[data-result-count]') == '12 watches', page.text_content('[data-result-count]'))
     check('model options limited to chosen maker', page.evaluate("[...document.querySelectorAll('#f-family option[data-brand]')].every(o => o.disabled === (o.dataset.brand !== 'Rolex'))"))
     page.select_option('#f-family', 'Daytona')
     cards = visible_cards()
-    check('filter by model family', len(cards) == 2 and all(c['family'] == 'Daytona' for c in cards), f'{len(cards)}')
+    check('filter by model family', len(cards) == 3 and all(c['family'] == 'Daytona' for c in cards), f'{len(cards)}')
     page.goto(BASE + 'inventory.html')
-    page.fill('[data-filter-input="q"]', '126610'); page.wait_for_timeout(300)
+    page.fill('[data-filter-input="q"]', '1661'); page.wait_for_timeout(300)
     ids = [c['id'] for c in visible_cards()]
-    check('search by reference', sorted(ids) == ['rolex-submariner-126610ln-2021', 'rolex-submariner-126610lv-2022'], str(ids))
-    check('search writes to URL', 'q=126610' in page.url, page.url)
+    check('search by reference', sorted(ids) == ['rolex-submariner-16610', 'rolex-submariner-16613-blue'], str(ids))
+    check('search writes to URL', 'q=1661' in page.url, page.url)
     page.fill('[data-filter-input="q"]', 'zzzz-no-match'); page.wait_for_timeout(300)
     check('empty state shows when nothing matches', page.is_visible('[data-empty]') and not visible_cards())
     page.click('[data-clear]'); page.wait_for_timeout(200)
-    check('clear filters restores all', len(visible_cards()) == 21, str(len(visible_cards())))
+    check('clear filters restores all', len(visible_cards()) == 23, str(len(visible_cards())))
     page.select_option('select[name="min"]', '10000'); page.select_option('select[name="max"]', '25000')
     prices = [int(c['price']) for c in visible_cards()]
     check('price range filter', prices and all(10000 <= x <= 25000 for x in prices), str(prices))
@@ -127,7 +127,7 @@ with sync_playwright() as p:
     cards = visible_cards()
     check('condition + box/papers filters combine', len(cards) == 2, str(len(cards)))
     page.check('input[name="avail"][value="available"]')
-    check('availability filter', [c['id'] for c in visible_cards()] == ['rolex-gmt-master-ii-126710blro-2023'], str(visible_cards()))
+    check('availability filter', [c['id'] for c in visible_cards()] == ['tudor-black-bay-54-m79000n', 'rolex-daytona-126500ln'], str(visible_cards()))
     check('filter state in URL', all(s in page.url for s in ['cond=unworn', 'set=full', 'avail=available', 'sort=price-asc']), page.url)
 
     page.goto(BASE + 'inventory.html')
@@ -141,12 +141,12 @@ with sync_playwright() as p:
     check('watchlist page shows saved watch', shown == [sid], str(shown))
     check('watchlist empty state hidden when items saved', not page.is_visible('[data-saved-empty]'))
     wa = page.get_attribute('[data-wa-saved]', 'href')
-    check('watchlist WhatsApp link lists saved refs', 'wa.me/12125550147' in wa and '126710BLRO' in unquote(wa), unquote(wa)[:120])
+    check('watchlist WhatsApp link lists saved refs', 'wa.me/12125550147' in wa and '126500LN' in unquote(wa), unquote(wa)[:120])
 
-    pdp = 'product/rolex-submariner-126610ln-2021.html'
+    pdp = 'product/rolex-submariner-16610.html'
     page.goto(BASE + pdp)
     wa = page.get_attribute('.pdp-cta .btn-wa', 'href')
-    check('WhatsApp deep link prefilled with reference', wa.startswith('https://wa.me/12125550147?text=') and '126610LN' in unquote(wa), unquote(wa))
+    check('WhatsApp deep link prefilled with reference', wa.startswith('https://wa.me/12125550147?text=') and '16610' in unquote(wa), unquote(wa))
     page.click('.pdp-cta [data-intent="hold"]')
     check('hold button opens dialog with hold intent', page.is_visible('#inquiry-dialog') and page.is_checked('#inquiry-dialog input[value="hold"]'))
     page.click('#inquiry-dialog button[type="submit"]')
@@ -159,7 +159,7 @@ with sync_playwright() as p:
     page.click('#inquiry-dialog button[type="submit"]'); page.wait_for_timeout(200)
     check('inquiry success state shown', page.is_visible('#inquiry-dialog [data-success]') and 'Inquiry received' in page.inner_text('#inquiry-dialog [data-success]'))
     leads = page.evaluate("JSON.parse(localStorage.getItem('gv:leads'))")
-    check('inquiry stored with watch and intent', leads and leads[-1]['type'] == 'inquiry' and leads[-1]['watchId'] == 'rolex-submariner-126610ln-2021' and leads[-1]['intent'] == 'hold', json.dumps(leads[-1] if leads else None)[:200])
+    check('inquiry stored with watch and intent', leads and leads[-1]['type'] == 'inquiry' and leads[-1]['watchId'] == 'rolex-submariner-16610' and leads[-1]['intent'] == 'hold', json.dumps(leads[-1] if leads else None)[:200])
     page.keyboard.press('Escape')
     check('Escape closes the dialog', not page.is_visible('#inquiry-dialog'))
     page.click('.pdp-cta > [data-inquire]')
@@ -173,8 +173,13 @@ with sync_playwright() as p:
     page.click('#inquiry-dialog [data-success] [data-close]')
     check('close button in success closes dialog', not page.is_visible('#inquiry-dialog'))
 
-    page.click('[data-view$="-dial.svg"]'); page.wait_for_timeout(400)
-    check('gallery thumbnail switches view', page.get_attribute('[data-g-img]', 'src').endswith('-dial.svg'))
+    page.click('.g-thumbs li:nth-child(2) [data-view]'); page.wait_for_timeout(400)
+    check('gallery thumbnail switches photo', page.get_attribute('[data-g-img]', 'src').endswith('-2-480.webp'))
+    page.click('[data-lightbox-open]'); page.wait_for_timeout(200)
+    check('full-screen viewer opens with large photo', page.evaluate("document.querySelector('[data-lightbox]').open") and '-2-' in page.get_attribute('[data-lb-img]', 'src'))
+    page.keyboard.press('ArrowRight'); page.wait_for_timeout(100)
+    check('viewer steps to next photo', '-3-' in page.get_attribute('[data-lb-img]', 'src'))
+    page.keyboard.press('Escape'); page.wait_for_timeout(100)
     page.click('[data-zoom]')
     check('zoom toggles', 'is-zoomed' in page.get_attribute('[data-zoom-wrap]', 'class') and page.get_attribute('[data-zoom]', 'aria-pressed') == 'true')
     page.click('[data-zoom]')
@@ -183,7 +188,7 @@ with sync_playwright() as p:
     page.evaluate('window.scrollTo(0, 0)'); page.wait_for_timeout(500)
     check('sticky bar hidden and inert at top', 'is-on' not in page.get_attribute('[data-sticky]', 'class') and page.get_attribute('[data-sticky]', 'inert') is not None)
     mctx = browser.new_context(viewport={'width': 375, 'height': 800}); mp = mctx.new_page()
-    mp.goto(BASE + 'product/rolex-submariner-126610ln-2021.html'); mp.wait_for_timeout(300)
+    mp.goto(BASE + 'product/rolex-submariner-16610.html'); mp.wait_for_timeout(300)
     mp.evaluate("window.scrollTo({top: 3000, behavior: 'instant'})"); mp.wait_for_timeout(300)
     jumped_down = 'is-on' in mp.get_attribute('[data-sticky]', 'class')
     mp.evaluate("window.scrollTo({top: 0, behavior: 'instant'})"); mp.wait_for_timeout(300)
@@ -191,9 +196,9 @@ with sync_playwright() as p:
     mctx.close()
     page.fill('#pa-email', 'alerts@example.com'); page.click('form[data-form="alert"] button[type="submit"]'); page.wait_for_timeout(200)
     check('price alert stores and confirms', page.is_visible('form[data-form="alert"] [data-success]') and page.evaluate("JSON.parse(localStorage.getItem('gv:leads')).at(-1).kind") == 'price')
-    check('trade-in link targets this watch', page.get_attribute('a[href*="sell.html?toward="]', 'href').endswith('toward=rolex-submariner-126610ln-2021'))
+    check('trade-in link targets this watch', page.get_attribute('a[href*="sell.html?toward="]', 'href').endswith('toward=rolex-submariner-16610'))
 
-    page.goto(BASE + 'sell.html?toward=ap-royal-oak-15500st-2020')
+    page.goto(BASE + 'sell.html?toward=ap-royal-oak-15202st')
     check('sell form shows trade-toward watch', page.is_visible('[data-toward]') and 'Royal Oak' in page.inner_text('[data-toward-name]') and page.is_checked('input[value="trade"]'))
     page.click('form[data-form="sell"] button[type="submit"]')
     check('sell form flags missing required fields', page.evaluate("document.querySelectorAll('form[data-form=sell] [aria-invalid=true]').length") >= 4)
@@ -207,7 +212,7 @@ with sync_playwright() as p:
     check('sell form rejects bad year', page.get_attribute('#s-year', 'aria-invalid') == 'true')
     page.fill('#s-year', '2019'); page.fill('#s-ref', '126334'); page.click('form[data-form="sell"] button[type="submit"]'); page.wait_for_timeout(200)
     lead = page.evaluate("JSON.parse(localStorage.getItem('gv:leads')).at(-1)")
-    check('sell lead stored with photos and trade target', lead['type'] == 'sell' and lead['toward'] == 'ap-royal-oak-15500st-2020' and len(lead.get('photos', [])) == 2, json.dumps(lead)[:200])
+    check('sell lead stored with photos and trade target', lead['type'] == 'sell' and lead['toward'] == 'ap-royal-oak-15202st' and len(lead.get('photos', [])) == 2, json.dumps(lead)[:200])
     check('sell lead keeps its own reference code and the watch reference separately', lead['ref'].startswith('GV-') and lead.get('watchRef') == '126334', f"{lead['ref']} {lead.get('watchRef')}")
     check('sell success replaces form', page.is_visible('form[data-form="sell"] [data-success]') and not page.is_visible('#s-model'))
 
@@ -224,9 +229,9 @@ with sync_playwright() as p:
     check('appointment success', page.is_visible('form[data-form="appointment"] [data-success]'))
     check("today's hours highlighted", page.evaluate("document.querySelectorAll('[data-hours] tr.today').length") == 1)
 
-    page.goto(BASE + 'inventory.html?source=Rolex%20126500LN#source')
-    check('sold listing prefills sourcing request', page.input_value('#al-model') == 'Rolex 126500LN')
-    page.goto(BASE + 'product/rolex-daytona-126500ln-2023.html')
+    page.goto(BASE + 'inventory.html?source=Rolex%2016523#source')
+    check('sold listing prefills sourcing request', page.input_value('#al-model') == 'Rolex 16523')
+    page.goto(BASE + 'product/rolex-daytona-16523.html')
     check('sold listing hides buy actions and offers sourcing', page.locator('.pdp-cta [data-inquire]').count() == 0 and page.is_visible('a[href*="#source"]'))
     check('functional run had no console errors', not errs, '; '.join(errs[:3]))
     ctx.close()
