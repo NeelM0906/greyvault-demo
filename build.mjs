@@ -1,12 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import * as art from './tools/watch-art.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8'));
 const cfg = read('content/config.json');
 const { watches } = read('content/inventory.json');
+const PHOTOS = read('content/photos.lock.json');
+const SITE_PHOTOS = read('content/site-photos.json');
 const write = (rel, data) => {
   const p = path.join(ROOT, rel);
   fs.mkdirSync(path.dirname(p), { recursive: true });
@@ -44,7 +45,16 @@ const priceLabel = w => (isPOR(w) ? cfg.pricing.requestLabel : money(w.price));
 const title = w => `${w.brand} ${w.model}`;
 const refLine = w => `Ref. ${w.ref} · ${w.year}`;
 const productPath = w => `product/${w.id}.html`;
-const img = (w, view) => `assets/watches/${w.id}-${view}.svg`;
+const photoKey = (w, i = 0) => `${w.id}-${i + 1}`;
+const largest = k => { const f = PHOTOS[k].files; return f[Math.max(...Object.keys(f).map(Number))]; };
+const smallest = k => { const f = PHOTOS[k].files; return f[Math.min(...Object.keys(f).map(Number))]; };
+const img = w => smallest(photoKey(w));
+const srcset = (k, r) => Object.entries(PHOTOS[k].files).map(([wd, f]) => `${r}${f} ${wd}w`).join(', ');
+const pic = (k, r, { alt = '', sizes = '100vw', cls = '', lazy = true, high = false, extra = '' } = {}) => {
+  const p = PHOTOS[k];
+  return `<img${cls ? ` class="${cls}"` : ''} src="${r}${smallest(k)}" srcset="${srcset(k, r)}" sizes="${sizes}" alt="${esc(alt)}" width="${p.width}" height="${p.height}"${lazy ? ' loading="lazy"' : ''}${high ? ' fetchpriority="high"' : ''} decoding="async"${extra}>`;
+};
+const credit = k => { const p = PHOTOS[k]; return `${p.author}, ${p.license}`; };
 const waHref = text => `https://wa.me/${K.whatsapp}?text=${encodeURIComponent(text)}`;
 const waWatch = w => waHref(`Hello ${B.name}, I'm interested in the ${w.brand} ${w.model.replace(/"/g, '')}, ref. ${w.ref} (${w.year}), listing ${w.id}. Is it available?`);
 const waGeneral = waHref(`Hello ${B.name}, I have a question.`);
@@ -187,7 +197,7 @@ function footer(r) {
   </div>
   <div class="wrap footer-base">
     <p>© <span data-copyright-year>2026</span> ${esc(B.legalName)}. Independent dealer. Not affiliated with any brand shown. Brand names are trademarks of their owners.</p>
-    <p><a href="${r}legal.html">Terms, warranty and privacy</a> · <a href="${r}sitemap.xml">Sitemap</a></p>
+    <p><a href="${r}credits.html">Photo credits</a> · <a href="${r}legal.html">Terms, warranty and privacy</a> · <a href="${r}sitemap.xml">Sitemap</a></p>
   </div>
 </footer>`;
 }
@@ -232,7 +242,7 @@ function card(w, r, { lazy = true, h = 'h3' } = {}) {
   const a = AVAIL[w.availability];
   const facts = [w.specs.caseSize, CONDITIONS[w.condition].label, SET[setKey(w)]];
   return `<article class="card" data-card data-id="${w.id}" data-brand="${esc(w.brand)}" data-family="${esc(w.family)}" data-price="${isPOR(w) ? '' : w.price}" data-cond="${w.condition}" data-set="${setKey(w)}" data-avail="${w.availability}" data-year="${w.year}" data-added="${w.added}" data-featured="${w.featured ? 1 : 0}" data-search="${esc(`${w.brand} ${w.family} ${w.model} ${w.ref} ${w.year} ${w.specs.dial} ${w.specs.material}`.toLowerCase())}">
-  <div class="card-media"><img src="${r}${img(w, 'front')}" alt="${esc(`${title(w)} ${w.ref}, illustration`)}" width="400" height="400"${lazy ? ' loading="lazy"' : ''} decoding="async">${w.availability !== 'available' ? `<span class="tag tag-${w.availability}">${a.label}</span>` : ''}
+  <div class="card-media">${pic(photoKey(w), r, { alt: w.photos[0].alt, sizes: '(min-width: 1100px) 300px, (min-width: 640px) 45vw, 92vw', lazy })}${w.photos[1] ? pic(photoKey(w, 1), r, { alt: '', cls: 'card-alt', sizes: '(min-width: 1100px) 300px, 45vw' }) : ''}${w.availability !== 'available' ? `<span class="tag tag-${w.availability}">${a.label}</span>` : ''}
     <button class="save-btn" type="button" data-save="${w.id}" aria-pressed="false" aria-label="Save ${esc(title(w))}">${ICON.save}</button></div>
   <div class="card-body">
     <p class="card-brand">${esc(w.brand)}</p>
@@ -297,7 +307,7 @@ const page = (file, nav, title, description, body, extra = {}) => pages.push({ f
 
 function home() {
   const r = '';
-  const hero = watches.find(w => w.id === 'rolex-gmt-master-ii-126710blro-2023') || watches[0];
+  const hero = watches.find(w => w.id === 'rolex-datejust-36-126234') || watches[0];
   const featured = sortFeatured(watches.filter(w => w.featured && w.id !== hero.id && w.availability !== 'sold')).slice(0, 4);
   const latest = [...watches].filter(w => w.availability !== 'sold' && w !== hero && !featured.includes(w)).sort((a, b) => b.added.localeCompare(a.added)).slice(0, 4);
   const rv = cfg.reviews;
@@ -311,7 +321,7 @@ function home() {
       <div class="cta-row"><a class="btn" href="inventory.html">View ${watches.filter(w => w.availability !== 'sold').length} watches</a><a class="btn btn-ghost" href="sell.html">Sell or trade</a></div>
     </div>
     <figure class="hero-piece">
-      <a href="${productPath(hero)}" class="hero-link" tabindex="-1" aria-hidden="true"><img src="${img(hero, 'front')}" alt="" width="400" height="400" fetchpriority="high"></a>
+      <a href="${productPath(hero)}" class="hero-link" tabindex="-1" aria-hidden="true">${pic(photoKey(hero), '', { alt: '', sizes: '(min-width: 900px) 46vw, 100vw', lazy: false, high: true })}</a>
       <figcaption><span class="hp-label">Just in</span><span class="hp-name">${esc(title(hero))}</span><span class="hp-meta">${esc(refLine(hero))} · ${esc(CONDITIONS[hero.condition].label)} · ${esc(priceLabel(hero))}</span><a class="hp-cta" href="${productPath(hero)}">View the condition report ${ICON.arrow}</a></figcaption>
     </figure>
   </div>
@@ -363,7 +373,7 @@ ${trustStrip()}
 <section class="section section-paper">
   <div class="wrap">
     <div class="section-head reveal"><div><p class="eyebrow">The people</p><h2>You will deal with one of us</h2></div><a class="link-arrow" href="about.html">About ${esc(B.name)} ${ICON.arrow}</a></div>
-    <ul class="team team-compact">${cfg.team.map(p => `<li class="reveal"><img src="assets/img/team-${initials(p.name).toLowerCase()}.svg" alt="Portrait placeholder for ${esc(p.name)}" width="300" height="360" loading="lazy"><p class="tm-name">${esc(p.name)}</p><p class="tm-role">${esc(p.role)} · since ${p.since}</p></li>`).join('')}</ul>
+    <ul class="team team-compact">${cfg.team.map(p => `<li class="reveal"><p class="tm-mono" aria-hidden="true">${initials(p.name)}</p><p class="tm-name">${esc(p.name)}</p><p class="tm-role">${esc(p.role)} · since ${p.since}</p></li>`).join('')}</ul>
   </div>
 </section>
 <section class="section">
@@ -447,8 +457,6 @@ function product(w) {
   const c = CONDITIONS[w.condition];
   const a = AVAIL[w.availability];
   const sold = w.availability === 'sold';
-  const views = [['front', 'Front'], ['dial', 'Dial'], ['back', 'Case back'], ...(art.boxAndPapers(w) ? [['set', 'Box and papers']] : [])];
-  const altFor = label => `${title(w)} ${w.ref}, ${label.toLowerCase()} view, illustration`;
   const related = sortFeatured(watches.filter(x => x.id !== w.id && x.availability !== 'sold'))
     .map(x => [x, (x.family === w.family) * 3 + (x.brand === w.brand) * 2 + (Math.abs((x.price || 0) - (w.price || 0)) < 15000)])
     .sort((p, q) => q[1] - p[1]).slice(0, 4).map(([x]) => x);
@@ -480,10 +488,12 @@ function product(w) {
 <nav class="wrap crumbs" aria-label="Breadcrumb"><ol><li><a href="${r}index.html">Home</a></li><li><a href="${r}inventory.html">Inventory</a></li><li><a href="${r}inventory.html?brand=${encodeURIComponent(w.brand)}">${esc(w.brand)}</a></li><li aria-current="page">${esc(w.model)}</li></ol></nav>
 <section class="wrap pdp" data-product="${w.id}">
   <div class="gallery" data-gallery>
-    <div class="g-main" data-zoom-wrap><img src="${r}${img(w, 'front')}" alt="${esc(altFor('Front'))}" width="400" height="400" data-g-img fetchpriority="high">
-      <button class="g-zoom" type="button" data-zoom aria-pressed="false">${ICON.zoom}<span>Zoom</span></button></div>
-    <ul class="g-thumbs" aria-label="Views">${views.map(([v, label], i) => `<li><button type="button" data-view="${r}${img(w, v)}" data-alt="${esc(altFor(label))}" aria-pressed="${i === 0}" aria-label="Show ${label.toLowerCase()} view"><img src="${r}${img(w, v)}" alt="" width="96" height="96" loading="lazy"></button></li>`).join('')}</ul>
-    <p class="fine">Illustrations for this demo. Live listings use the dealer's own photographs of this exact watch.</p>
+    <div class="g-main" data-zoom-wrap>${pic(photoKey(w), r, { alt: w.photos[0].alt, sizes: '(min-width: 1000px) 56vw, 100vw', lazy: false, high: true, extra: ` data-g-img data-full="${r}${largest(photoKey(w))}"` })}
+      <button class="g-zoom" type="button" data-zoom aria-pressed="false">${ICON.zoom}<span>Zoom</span></button>
+      <button class="g-expand" type="button" data-lightbox-open aria-label="View photo full screen">Full screen</button></div>
+    ${w.photos.length > 1 ? `<ul class="g-thumbs" aria-label="Photos">${w.photos.map((p, i) => `<li><button type="button" data-view="${r}${smallest(photoKey(w, i))}" data-srcset="${srcset(photoKey(w, i), r)}" data-full="${r}${largest(photoKey(w, i))}" data-w="${PHOTOS[photoKey(w, i)].width}" data-h="${PHOTOS[photoKey(w, i)].height}" data-alt="${esc(p.alt)}" data-credit="${esc(credit(photoKey(w, i)))}" aria-pressed="${i === 0}" aria-label="Show photo ${i + 1} of ${w.photos.length}">${pic(photoKey(w, i), r, { alt: '', sizes: '96px' })}</button></li>`).join('')}</ul>` : ''}
+    <p class="fine g-credit">Photo: <span data-g-credit>${esc(credit(photoKey(w)))}</span>, via Wikimedia Commons. <a href="${r}credits.html#${w.id}">Credits</a></p>
+    <dialog class="lightbox" data-lightbox aria-label="Photo viewer"><img src="" alt="" data-lb-img><button class="lb-close" type="button" data-lightbox-close aria-label="Close">${ICON.close}</button>${w.photos.length > 1 ? '<button class="lb-nav lb-prev" type="button" data-lb-step="-1" aria-label="Previous photo">‹</button><button class="lb-nav lb-next" type="button" data-lb-step="1" aria-label="Next photo">›</button>' : ''}</dialog>
   </div>
   <div class="pdp-info">
     <p class="eyebrow">${esc(w.brand)} · ${esc(w.family)}</p>
@@ -509,8 +519,9 @@ function product(w) {
     <p class="pdp-contact">Questions? Call <a href="tel:${K.phoneHref}">${esc(K.phone)}</a> or visit Booth 12 and ask for ${esc(advisor)}.</p>
   </div>
 </section>
-<nav class="wrap pdp-toc" aria-label="On this page"><a href="#specs">Specifications</a><a href="#condition">Condition report</a><a href="#included">What's included</a><a href="#provenance">Provenance</a><a href="#guarantee">Guarantee</a><a href="#shipping">Shipping and returns</a><a href="#payment">Payment</a></nav>
+<nav class="wrap pdp-toc" aria-label="On this page"><a href="#about">About this watch</a><a href="#specs">Specifications</a><a href="#condition">Condition report</a><a href="#included">What's included</a><a href="#provenance">Provenance</a><a href="#guarantee">Guarantee</a><a href="#shipping">Shipping and returns</a><a href="#payment">Payment</a></nav>
 <div class="wrap pdp-sections">
+  <section id="about" class="pdp-sec pdp-sec-wide pdp-about"><h2>About this watch</h2><p class="pdp-desc">${esc(w.description)}</p></section>
   <section id="specs" class="pdp-sec"><h2>Specifications</h2><table class="spec"><tbody>${specRows.map(([k, v]) => `<tr><th scope="row">${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table></section>
   <section id="condition" class="pdp-sec"><h2>Condition report</h2>
     <p class="sr-only">Grade ${gradeIdx + 1} of ${grades.length}, where 1 is best.</p>
@@ -536,7 +547,7 @@ function product(w) {
     <p class="fine">One message if the price drops or it sells. Nothing else.</p></div>
 </section>
 <section class="section"><div class="wrap"><div class="section-head"><div><p class="eyebrow">You may also consider</p><h2>Related pieces</h2></div><a class="link-arrow" href="${r}inventory.html">All inventory ${ICON.arrow}</a></div><div class="grid grid-4">${related.map(x => card(x, r)).join('')}</div></div></section>
-${sold ? '' : `<div class="sticky-cta" data-sticky aria-hidden="true" inert><div class="wrap sticky-row"><img src="${r}${img(w, 'front')}" alt="" width="44" height="44"><div class="s-meta"><p class="s-name">${esc(w.model)}</p><p class="s-price">${esc(priceLabel(w))}</p></div><button class="btn btn-sm" type="button" data-inquire="${w.id}">Inquire</button><a class="btn btn-sm btn-ghost btn-wa" href="${waWatch(w)}" target="_blank" rel="noopener" aria-label="WhatsApp about this watch">${ICON.wa}<span>WhatsApp</span></a></div></div>`}`, { jsonld: ld, og: `assets/og/${w.id}.png`, ogType: 'product', bodyClass: sold ? '' : 'has-sticky' });
+${sold ? '' : `<div class="sticky-cta" data-sticky aria-hidden="true" inert><div class="wrap sticky-row"><img src="${r}${img(w)}" alt="" width="44" height="44" loading="lazy" decoding="async"><div class="s-meta"><p class="s-name">${esc(w.model)}</p><p class="s-price">${esc(priceLabel(w))}</p></div><button class="btn btn-sm" type="button" data-inquire="${w.id}">Inquire</button><a class="btn btn-sm btn-ghost btn-wa" href="${waWatch(w)}" target="_blank" rel="noopener" aria-label="WhatsApp about this watch">${ICON.wa}<span>WhatsApp</span></a></div></div>`}`, { jsonld: ld, og: `assets/og/${w.id}.png`, ogType: 'product', bodyClass: sold ? '' : 'has-sticky' });
 }
 
 function sell() {
@@ -583,6 +594,7 @@ function sell() {
 function authenticity() {
   page('authenticity.html', 'authenticity.html', 'How we authenticate', 'Our six-step authentication process: sourcing checks, movement inspection, timegrapher readings, condition grading and a lifetime authenticity guarantee.', `
 <section class="page-head"><div class="wrap narrow"><p class="eyebrow">Authenticity</p><h1>What happens before a watch is listed</h1><p class="lede-sm">Buyers on 47th Street worry about counterfeits, mixed parts, refinished dials and over-polished cases. These are the checks we do so you do not have to.</p></div></section>
+<figure class="wrap bench-fig">${pic('bench', '', { alt: SITE_PHOTOS.bench.alt, sizes: '(min-width: 900px) 420px, 92vw' })}<figcaption class="fine">Every movement is examined before listing. Photo: ${esc(credit('bench'))}, via Wikimedia Commons.</figcaption></figure>
 <section class="wrap block"><ol class="steps steps-wide">${AUTH_STEPS.map(([t, b], i) => `<li class="reveal"><span class="step-n">${String(i + 1).padStart(2, '0')}</span><div><p class="step-t">${t}</p><p class="step-b">${esc(b)}</p></div></li>`).join('')}</ol></section>
 <section class="section section-paper" id="grading"><div class="wrap">
   <p class="eyebrow">Condition grading</p><h2>Four grades, used consistently</h2>
@@ -604,7 +616,7 @@ function about() {
   page('about.html', 'about.html', 'About and team', `${B.name} is an independent watch dealer on West 47th Street, New York, since ${B.founded}. Meet the people who buy, inspect and sell every watch.`, `
 <section class="page-head"><div class="wrap narrow"><p class="eyebrow">About</p><h1>A family booth that grew up</h1>
 <p class="lede-sm">${esc(B.name)} started in ${B.founded} as a single case at the end of an exchange on West 47th Street. We still sit on the street, and we still answer our own phone. What changed is the process: every watch is now opened, measured and documented before you ever see it.</p></div></section>
-<section class="wrap block"><ul class="team">${cfg.team.map(p => `<li class="reveal"><img src="assets/img/team-${initials(p.name).toLowerCase()}.svg" alt="Portrait placeholder for ${esc(p.name)}" width="300" height="360" loading="lazy"><p class="tm-name">${esc(p.name)}</p><p class="tm-role">${esc(p.role)} · since ${p.since}</p><p class="tm-bio">${esc(p.bio)}</p></li>`).join('')}</ul></section>
+<section class="wrap block"><ul class="team">${cfg.team.map(p => `<li class="reveal"><p class="tm-mono" aria-hidden="true">${initials(p.name)}</p><p class="tm-name">${esc(p.name)}</p><p class="tm-role">${esc(p.role)} · since ${p.since}</p><p class="tm-bio">${esc(p.bio)}</p></li>`).join('')}</ul></section>
 <section class="section section-paper"><div class="wrap values">
   ${[['Prices on the page', 'Most dealers make you ask. We list prices on everything except the few references that move weekly, and we answer those the same day.'], ['Flaws on the page', 'Each listing has a signed condition report with timegrapher readings. If it was polished, we say so.'], ['People, not a chat widget', 'A named person replies to every inquiry, usually within two business hours. You can also just walk in.']].map(([t, b]) => `<div class="reveal"><h2 class="h3">${t}</h2><p>${b}</p></div>`).join('')}
 </div></section>
@@ -650,6 +662,14 @@ function faq() {
   });
 }
 
+function credits() {
+  const row = (k, label, href) => { const p = PHOTOS[k]; return `<li id="${k}"><a class="cr-thumb" href="${href}">${pic(k, '', { alt: '', sizes: '96px' })}</a><div><p class="cr-t">${label}</p><p class="fine">${esc(p.author)}. <a href="${esc(p.licenseUrl || p.source)}" rel="license noopener" target="_blank">${esc(p.license)}</a>. <a href="${esc(p.source)}" rel="noopener" target="_blank">Source on Wikimedia Commons</a>. Resized and converted to WebP.</p></div></li>`; };
+  page('credits.html', null, 'Photo credits', 'Authors, licenses and sources for every photograph on this site.', `
+<section class="page-head"><div class="wrap narrow"><p class="eyebrow">Credits</p><h1>Photo credits</h1><p class="lede-sm">Every photograph on this demo comes from Wikimedia Commons under a free license. They show the stated reference but are not photographs of this dealer's stock. Each is credited below as its license requires; images under CC BY-SA remain available under the same license.</p></div></section>
+<section class="wrap narrow block">${watches.map(w => `<h2 class="cr-h" id="${w.id}"><a href="${productPath(w)}">${esc(title(w))} ${esc(w.ref)}</a></h2><ul class="cr-list">${w.photos.map((p, i) => row(photoKey(w, i), esc(p.alt), productPath(w))).join('')}</ul>`).join('')}
+<h2 class="cr-h">Site photography</h2><ul class="cr-list">${Object.entries(SITE_PHOTOS).map(([k, p]) => row(k, esc(p.alt), 'authenticity.html')).join('')}</ul></section>`);
+}
+
 function legal() {
   page('legal.html', null, 'Terms, warranty and privacy', `Terms of sale, warranty, returns and privacy policy for ${B.legalName}.`, `
 <section class="page-head"><div class="wrap narrow"><p class="eyebrow">Legal</p><h1>Terms, warranty and privacy</h1><p class="fine">Template text. Have counsel review before launch.</p></div></section>
@@ -661,7 +681,7 @@ function legal() {
 <h2 id="holds">Holds and offers</h2><p>A hold reserves a watch for ${P.holdHours} hours without payment. Offers are answered within one business day. An accepted offer is held for ${P.holdHours} hours pending payment.</p>
 <h2 id="privacy">Privacy</h2><p>We collect the details you send through forms, WhatsApp, email or phone in order to answer you and complete a sale. We do not sell or share personal information with third parties except carriers, payment processors and lenders needed to complete your transaction. Saved watches are stored only in your browser. This site sets no advertising or tracking cookies. To ask for your data to be deleted, email ${esc(K.email)}.</p>
 <h2 id="trademarks">Trademarks</h2><p>Rolex, Audemars Piguet, Patek Philippe, Omega, Cartier, Tudor and all model names are trademarks of their respective owners and are used only to describe the watches offered.</p>
-<h2 id="demo">About this demo</h2><p>This site is the ${esc(B.name)} template, shown with fictional content. The dealer, team members, reviews, listings, prices, address details and phone number are placeholders. Watch images are generated illustrations, not photographs, and do not depict real inventory. Forms store submissions in your browser only until a form endpoint is configured.</p>
+<h2 id="demo">About this demo</h2><p>This site is the ${esc(B.name)} template, shown with fictional content. The dealer, team members, reviews, listings, prices, address details and phone number are placeholders. The watches are real references. Their photographs come from Wikimedia Commons contributors under free licenses, listed on the <a href="credits.html">photo credits</a> page; they are not photographs of this dealer's stock. Forms store submissions in your browser only until a form endpoint is configured.</p>
 </section>`);
 }
 
@@ -688,20 +708,12 @@ function runtimeData() {
     whatsapp: K.whatsapp,
     forms: cfg.forms,
     hours: cfg.hours,
-    watches: Object.fromEntries(watches.map(w => [w.id, { name: title(w), ref: w.ref, year: w.year, priceLabel: priceLabel(w), img: img(w, 'front'), url: productPath(w), availability: w.availability }])),
+    watches: Object.fromEntries(watches.map(w => [w.id, { name: title(w), ref: w.ref, year: w.year, priceLabel: priceLabel(w), img: img(w), url: productPath(w), availability: w.availability }])),
   };
   return `window.GV=${JSON.stringify(data)};\n`;
 }
 
 function images() {
-  for (const w of watches) {
-    write(img(w, 'front'), art.front(w));
-    write(img(w, 'dial'), art.dialDetail(w));
-    write(img(w, 'back'), art.caseback(w));
-    const s = art.boxAndPapers(w);
-    if (s) write(img(w, 'set'), s);
-  }
-  cfg.team.forEach((p, i) => write(`assets/img/team-${initials(p.name).toLowerCase()}.svg`, art.monogram(initials(p.name), ['#23272B', '#2B2622', '#1F2A26', '#262330'][i % 4])));
   write('assets/img/favicon.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="${cfg.colors.ink}"/><circle cx="32" cy="32" r="19" fill="none" stroke="${cfg.colors.ivory}" stroke-width="2.5"/><path d="M32 18v14l9 6" fill="none" stroke="${cfg.colors.ivory}" stroke-width="2.5" stroke-linecap="round"/></svg>`);
 }
 
@@ -711,7 +723,7 @@ function seoFiles() {
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
   write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /saved.html\n\nSitemap: ${abs('sitemap.xml')}\n`);
   write('site.webmanifest', JSON.stringify({ name: B.name, short_name: B.name, start_url: './index.html', display: 'browser', background_color: cfg.colors.ivory, theme_color: cfg.colors.ink, icons: [{ src: 'assets/img/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }] }, null, 2));
-  write('assets/og/manifest.json', JSON.stringify({ site: { title: B.name, line: B.tagline, img: img(watches.find(w => w.featured), 'front') }, products: watches.map(w => ({ id: w.id, brand: w.brand, model: w.model, line: `${refLine(w)} · ${CONDITIONS[w.condition].label} · ${w.availability === 'sold' ? 'Sold' : priceLabel(w)}`, img: img(w, 'front') })) }, null, 1));
+  write('assets/og/manifest.json', JSON.stringify({ site: { title: B.name, line: B.tagline, img: largest(photoKey(watches.find(w => w.featured))) }, products: watches.map(w => ({ id: w.id, brand: w.brand, model: w.model, line: `${refLine(w)} · ${CONDITIONS[w.condition].label} · ${w.availability === 'sold' ? 'Sold' : priceLabel(w)}`, img: largest(photoKey(w)) })) }, null, 1));
 }
 
 home();
@@ -723,6 +735,7 @@ about();
 visit();
 faq();
 legal();
+credits();
 saved();
 notFound();
 

@@ -1,236 +1,1192 @@
 {
-  "notice": "Demo inventory. Fictional listings for template demonstration only. Not real stock, prices or serials.",
+  "notice": "Demo inventory. The watches are real references photographed by Wikimedia Commons contributors (see credits.html). Prices, condition reports, provenance and the dealer are illustrative.",
   "watches": [
     {
-      "id": "rolex-submariner-126610ln-2021",
-      "brand": "Rolex", "family": "Submariner", "model": "Submariner Date", "ref": "126610LN", "year": 2021,
-      "featured": true, "added": "2026-11-02", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 14250, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "June 2021", "extras": ["Hang tag", "Green seal", "Bracelet links (2)"] },
-      "specs": { "caseSize": "41 mm", "material": "Oystersteel", "dial": "Black", "bezel": "Black Cerachrom, unidirectional", "bracelet": "Oyster, Glidelock clasp", "movement": "Automatic, cal. 3235", "powerReserve": "70 hours", "water": "300 m" },
-      "report": { "case": "Unpolished. Original lug chamfers intact. Two faint hairlines on the clasp only.", "bracelet": "Tight. No stretch. One link removed, both spares included.", "dial": "Flawless under 10x loupe. Lume even.", "crystal": "No chips or scratches.", "rate": "+1.8 s/day", "amplitude": "289°", "service": "Not yet required. Factory warranty card dated June 2021." },
-      "provenance": "One owner, purchased from an authorized dealer in New Jersey. Traded toward a Daytona.",
-      "art": { "case": "round", "metal": "steel", "bezel": "dive", "bezelColors": ["#141414"], "dial": "#121314", "texture": "gloss", "markers": "dive", "hands": "mercedes", "complication": "date", "bracelet": "oyster", "crownGuards": true }
+      "id": "rolex-submariner-16610",
+      "brand": "Rolex",
+      "family": "Submariner",
+      "model": "Submariner Date",
+      "ref": "16610",
+      "year": 2003,
+      "featured": true,
+      "added": "2026-11-06",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 10950,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2003",
+        "extras": [
+          "Bracelet link (1)"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel (904L)",
+        "dial": "Black gloss, applied white-gold surrounds",
+        "bezel": "Black aluminium insert, 60-minute unidirectional",
+        "bracelet": "Oyster, Fliplock diver's clasp",
+        "movement": "Automatic, Rolex cal. 3135",
+        "powerReserve": "Approx. 48 hours",
+        "water": "300 m"
+      },
+      "report": {
+        "case": "Lightly polished once at service. Lugs remain full, bevels soft but present.",
+        "bracelet": "Minor stretch typical of the hollow-end-link generation. Clasp closes firmly.",
+        "dial": "Original tritium-free Luminova dial, even lume, no marks.",
+        "crystal": "Sapphire with Cyclops, clean.",
+        "rate": "+2.4 s/day",
+        "amplitude": "276°",
+        "service": "Serviced 2023 by our watchmaker. New gaskets, pressure tested to 300 m."
+      },
+      "provenance": "Second owner. Bought from the original owner in Westchester with the 2003 warranty papers.",
+      "description": "The last of the classic aluminium-bezel Submariner Dates, and for many collectors the purest. The 16610 ran from 1988 to 2010 with the cal. 3135, a sapphire crystal and the slimmer case that later ceramic models gave up. This one wears its twenty years honestly: a clean dial and hands, a bezel insert without fade, and a case that has seen one careful polish.",
+      "photos": [
+        {
+          "file": "Rolex Submariner Professional.JPG",
+          "alt": "Rolex Submariner Date 16610 resting on a cream watch pillow, black dial and bezel, steel Oyster bracelet"
+        },
+        {
+          "file": "The Rolex Submariner Professional.JPG",
+          "alt": "Front view of the Submariner Date 16610 showing the black dial, date window under the Cyclops lens and black bezel"
+        },
+        {
+          "file": "Back of Rolex Submariner Professional.JPG",
+          "alt": "Plain steel case back and bracelet clasp of the Submariner 16610"
+        },
+        {
+          "file": "Edge view of Rolex Submariner Professional.JPG",
+          "alt": "Side profile of the Submariner 16610 case on a watch pillow"
+        }
+      ]
     },
     {
-      "id": "rolex-submariner-126610lv-2022",
-      "brand": "Rolex", "family": "Submariner", "model": "Submariner Date “Starbucks”", "ref": "126610LV", "year": 2022,
-      "featured": false, "added": "2026-10-28", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 16900, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "March 2022", "extras": ["Green seal"] },
-      "specs": { "caseSize": "41 mm", "material": "Oystersteel", "dial": "Black", "bezel": "Green Cerachrom, unidirectional", "bracelet": "Oyster, Glidelock clasp", "movement": "Automatic, cal. 3235", "powerReserve": "70 hours", "water": "300 m" },
-      "report": { "case": "Unpolished. Light desk marks on the clasp and the right side of the case.", "bracelet": "Light wear on center links. No stretch.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+2.4 s/day", "amplitude": "281°", "service": "Not yet required." },
-      "provenance": "Second owner. Purchased from a collector in Westchester.",
-      "art": { "case": "round", "metal": "steel", "bezel": "dive", "bezelColors": ["#1F4D35"], "dial": "#111312", "texture": "gloss", "markers": "dive", "hands": "mercedes", "complication": "date", "bracelet": "oyster", "crownGuards": true }
+      "id": "rolex-submariner-16613-blue",
+      "brand": "Rolex",
+      "family": "Submariner",
+      "model": "Submariner Date \"Bluesy\"",
+      "ref": "16613",
+      "year": 1999,
+      "featured": false,
+      "added": "2026-10-28",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 12400,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": false,
+        "papersDate": null,
+        "extras": [
+          "Service card (2022)"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel and 18k yellow gold",
+        "dial": "Blue sunburst",
+        "bezel": "Blue aluminium insert, gold numerals, unidirectional",
+        "bracelet": "Two-tone Oyster, Fliplock clasp",
+        "movement": "Automatic, Rolex cal. 3135",
+        "powerReserve": "Approx. 48 hours",
+        "water": "300 m"
+      },
+      "report": {
+        "case": "Polished at service. Gold centre links show light wear consistent with age.",
+        "bracelet": "Light stretch. Gold clasp blade crisp.",
+        "dial": "Blue sunburst dial without spotting. Lume aged evenly.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+3.1 s/day",
+        "amplitude": "271°",
+        "service": "Serviced 2022, card included."
+      },
+      "provenance": "Purchased from a private collector in Boca Raton. Warranty papers not present; serial range consistent with 1999.",
+      "description": "Steel and yellow gold with a blue sunburst dial and matching blue bezel, the two-tone Submariner known on the street as the Bluesy. It is a confident watch that still reads as a tool diver, and the 16613 generation keeps the lighter case and aluminium insert that many prefer to the later ceramic 116613.",
+      "photos": [
+        {
+          "file": "Mysub16613x.JPG",
+          "alt": "Rolex Submariner Date 16613 in steel and yellow gold with blue dial, held in the hand"
+        },
+        {
+          "file": "Rolex Oyster Perpetual Date Submariner Watch.JPG",
+          "alt": "Close view of the blue sunburst dial and blue bezel of the Submariner 16613 with gold-edged markers"
+        },
+        {
+          "file": "Rolex Submariner watch 16613.JPG",
+          "alt": "Submariner 16613 two-tone Oyster bracelet with the gold crown clasp"
+        }
+      ]
     },
     {
-      "id": "rolex-gmt-master-ii-126710blro-2023",
-      "brand": "Rolex", "family": "GMT-Master II", "model": "GMT-Master II “Pepsi”", "ref": "126710BLRO", "year": 2023,
-      "featured": true, "added": "2026-11-06", "availability": "available",
-      "condition": "unworn", "polished": false, "price": 21800, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "September 2023", "extras": ["Hang tag", "Green seal", "Stickers on case back"] },
-      "specs": { "caseSize": "40 mm", "material": "Oystersteel", "dial": "Black", "bezel": "Blue and red Cerachrom, bidirectional 24-hour", "bracelet": "Jubilee, Oysterlock clasp", "movement": "Automatic, cal. 3285", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Unworn. Factory protective stickers still applied.", "bracelet": "Unsized. All links present.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+0.9 s/day", "amplitude": "296°", "service": "Not required. Factory warranty active." },
-      "provenance": "Purchased at retail by a client, never worn. Card dated September 2023.",
-      "art": { "case": "round", "metal": "steel", "bezel": "gmt", "bezelColors": ["#B3242C", "#1C3F8C"], "dial": "#111214", "texture": "gloss", "markers": "dive", "hands": "mercedes", "complication": "gmt", "gmtHand": "#B3242C", "bracelet": "jubilee", "crownGuards": true }
+      "id": "rolex-submariner-14060m",
+      "brand": "Rolex",
+      "family": "Submariner",
+      "model": "Submariner (No Date)",
+      "ref": "14060M",
+      "year": 2005,
+      "featured": false,
+      "added": "2026-10-22",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 8900,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2005",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel",
+        "dial": "Black matte, Swiss Made",
+        "bezel": "Black aluminium insert, unidirectional",
+        "bracelet": "Oyster, Fliplock clasp",
+        "movement": "Automatic, Rolex cal. 3130",
+        "powerReserve": "Approx. 48 hours",
+        "water": "300 m"
+      },
+      "report": {
+        "case": "Unpolished. Original brushing on lug tops.",
+        "bracelet": "Tight, one spare link.",
+        "dial": "Clean dial, two-line text of the non-chronometer 14060M-0001.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+1.6 s/day",
+        "amplitude": "283°",
+        "service": "Serviced 2024, pressure tested."
+      },
+      "provenance": "One owner from new. Traded in toward a Daytona.",
+      "description": "The no-date Submariner in its last aluminium-bezel form. Without the Cyclops the dial is perfectly symmetrical, and the cal. 3130 is one of the most reliable automatic movements Rolex has made. A watch you can wear every day for the next thirty years.",
+      "photos": [
+        {
+          "file": "Rolex Submariner ref. 14060M, metà anni 2000.jpg",
+          "alt": "Rolex Submariner 14060M no-date with black dial and black bezel on an Oyster bracelet"
+        }
+      ]
     },
     {
-      "id": "rolex-daytona-116500ln-2019",
-      "brand": "Rolex", "family": "Daytona", "model": "Cosmograph Daytona", "ref": "116500LN", "year": 2019,
-      "featured": true, "added": "2026-10-30", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 29500, "priceOnRequest": true,
-      "set": { "box": true, "papers": true, "papersDate": "April 2019", "extras": ["Service card (2024)"] },
-      "specs": { "caseSize": "40 mm", "material": "Oystersteel", "dial": "White", "bezel": "Black Cerachrom tachymeter", "bracelet": "Oyster, Oysterlock clasp", "movement": "Automatic chronograph, cal. 4130", "powerReserve": "72 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Sharp bevels. One hairline on the left lug top.", "bracelet": "Tight. Two spare links included.", "dial": "Flawless. Subdial rings clean.", "crystal": "Clean.", "rate": "+1.2 s/day", "amplitude": "284°", "service": "Rolex service 2024 with card. Chronograph resets to zero cleanly." },
-      "provenance": "Two owners. Serviced by Rolex New York in 2024, paperwork on file.",
-      "art": { "case": "round", "metal": "steel", "bezel": "tachy", "bezelColors": ["#121212"], "dial": "#ECEAE4", "texture": "matte", "markers": "baton", "hands": "baton", "complication": "chrono3", "subdial": "#1A1A1A", "bracelet": "oyster", "crownGuards": true, "pushers": true }
+      "id": "rolex-gmt-master-ii-16710",
+      "brand": "Rolex",
+      "family": "GMT-Master II",
+      "model": "GMT-Master II",
+      "ref": "16710",
+      "year": 2001,
+      "featured": true,
+      "added": "2026-11-04",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 13500,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2001",
+        "extras": [
+          "Inner and outer box"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel",
+        "dial": "Black gloss",
+        "bezel": "Black aluminium 24-hour insert, bidirectional",
+        "bracelet": "Oyster, Fliplock clasp",
+        "movement": "Automatic, Rolex cal. 3185",
+        "powerReserve": "Approx. 50 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Unpolished. Sharp case edges.",
+        "bracelet": "Tight. Solid end links.",
+        "dial": "Clean black dial with red GMT hand.",
+        "crystal": "Sapphire with Cyclops, clean.",
+        "rate": "+1.9 s/day",
+        "amplitude": "281°",
+        "service": "Not yet required. Last serviced 2021."
+      },
+      "provenance": "Second owner, complete with the original green Rolex box.",
+      "description": "The 16710 is the GMT-Master II that made the independent 24-hour hand normal. Set local time with the crown, read home time on the bezel, and change the bezel insert colour if you ever tire of it. This example comes on its original box with the black insert fitted.",
+      "photos": [
+        {
+          "file": "Rolex GMT Master II - 16710 in it sitting on top of the box.jpg",
+          "alt": "Rolex GMT-Master II 16710 lying on its green Rolex box, black bezel and dial"
+        },
+        {
+          "file": "Rolex GMT Master II - 16710 (without background).jpg",
+          "alt": "Front view of the GMT-Master II 16710 with Oyster bracelet, black 24-hour bezel and red GMT hand"
+        },
+        {
+          "file": "Rolex GMT Master II - 16710 (without background, cropped to casing).jpg",
+          "alt": "Dial close-up of the GMT-Master II 16710 showing the date window and red arrow GMT hand"
+        }
+      ]
     },
     {
-      "id": "rolex-datejust-41-126334-2020",
-      "brand": "Rolex", "family": "Datejust", "model": "Datejust 41", "ref": "126334", "year": 2020,
-      "featured": false, "added": "2026-10-19", "availability": "available",
-      "condition": "very-good", "polished": true, "price": 12450, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "February 2020", "extras": [] },
-      "specs": { "caseSize": "41 mm", "material": "Oystersteel and white gold", "dial": "Blue sunburst", "bezel": "Fluted white gold", "bracelet": "Jubilee, Oysterclasp", "movement": "Automatic, cal. 3235", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Lightly polished once by the previous owner. Edges still defined. We disclose every polish.", "bracelet": "Minor stretch, within normal for age.", "dial": "Clean.", "crystal": "Clean.", "rate": "+3.1 s/day", "amplitude": "276°", "service": "Not yet required." },
-      "provenance": "Second owner. Sourced from a private seller in Brooklyn.",
-      "art": { "case": "round", "metal": "steel", "bezel": "fluted", "bezelMetal": "white", "dial": "#1E3A6E", "texture": "sunburst", "markers": "baton", "hands": "baton", "complication": "date", "bracelet": "jubilee" }
+      "id": "rolex-gmt-master-ii-116710blnr",
+      "brand": "Rolex",
+      "family": "GMT-Master II",
+      "model": "GMT-Master II \"Batman\"",
+      "ref": "116710BLNR",
+      "year": 2016,
+      "featured": false,
+      "added": "2026-10-25",
+      "availability": "on-hold",
+      "condition": "excellent",
+      "polished": false,
+      "price": 17200,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2016",
+        "extras": [
+          "Hang tag"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Oystersteel",
+        "dial": "Black gloss",
+        "bezel": "Blue and black Cerachrom 24-hour, bidirectional",
+        "bracelet": "Oyster, Oysterlock with Easylink",
+        "movement": "Automatic, Rolex cal. 3186",
+        "powerReserve": "Approx. 48 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Unpolished. Faint hairlines on the clasp.",
+        "bracelet": "Tight.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "+1.1 s/day",
+        "amplitude": "290°",
+        "service": "Not yet required."
+      },
+      "provenance": "One owner from new, purchased in Miami.",
+      "description": "The first two-colour ceramic bezel Rolex produced, blue and black, on the Oyster bracelet before the 2019 switch to Jubilee. Discontinued, and already sought after.",
+      "photos": [
+        {
+          "file": "Rolex GMT Master II 116710BLNR Batman.jpg",
+          "alt": "Rolex GMT-Master II 116710BLNR Batman on the wrist with blue and black ceramic bezel"
+        }
+      ]
     },
     {
-      "id": "rolex-day-date-40-228238-2018",
-      "brand": "Rolex", "family": "Day-Date", "model": "Day-Date 40", "ref": "228238", "year": 2018,
-      "featured": true, "added": "2026-10-11", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 38500, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "August 2018", "extras": ["Rolex service pouch"] },
-      "specs": { "caseSize": "40 mm", "material": "18k yellow gold", "dial": "Champagne", "bezel": "Fluted yellow gold", "bracelet": "President, concealed Crownclasp", "movement": "Automatic, cal. 3255", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Light surface marks consistent with gentle wear.", "bracelet": "President links tight. No stretch.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+1.5 s/day", "amplitude": "287°", "service": "Not yet required." },
-      "provenance": "One owner. Purchased new in Manhattan.",
-      "art": { "case": "round", "metal": "yellow", "bezel": "fluted", "dial": "#CDB48A", "texture": "sunburst", "markers": "baton", "hands": "baton", "complication": "daydate", "bracelet": "president" }
+      "id": "rolex-daytona-16528-yellow-gold",
+      "brand": "Rolex",
+      "family": "Daytona",
+      "model": "Cosmograph Daytona",
+      "ref": "16528",
+      "year": 1994,
+      "featured": true,
+      "added": "2026-11-02",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 32500,
+      "priceOnRequest": true,
+      "set": {
+        "box": true,
+        "papers": false,
+        "papersDate": null,
+        "extras": [
+          "Rolex service papers (2019)"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "18k yellow gold",
+        "dial": "White with black subdial rings",
+        "bezel": "Gold tachymeter",
+        "bracelet": "Gold Oyster, Oysterlock clasp",
+        "movement": "Automatic chronograph, Rolex cal. 4030 (Zenith El Primero base)",
+        "powerReserve": "Approx. 54 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Light polish at Rolex service. Lugs full.",
+        "bracelet": "Gold Oyster with light stretch.",
+        "dial": "Original dial, crisp printing, subdial rings clean.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+2.7 s/day",
+        "amplitude": "268°",
+        "service": "Rolex service 2019, papers included."
+      },
+      "provenance": "From a Long Island collection. S-serial case, 1993 to 1994.",
+      "description": "The Zenith-powered Daytona in solid yellow gold. Rolex modified the El Primero calibre heavily, dropping its beat rate for longevity, and the 16528 is the gold expression of the most collected Daytona generation. Heavy on the wrist, warm in colour, and increasingly hard to find unpolished.",
+      "photos": [
+        {
+          "file": "Daytona 16528.jpg",
+          "alt": "Rolex Cosmograph Daytona 16528 in yellow gold with white dial and black subdial rings"
+        }
+      ]
     },
     {
-      "id": "rolex-explorer-124270-2022",
-      "brand": "Rolex", "family": "Explorer", "model": "Explorer 36", "ref": "124270", "year": 2022,
-      "featured": false, "added": "2026-10-24", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 8950, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "May 2022", "extras": [] },
-      "specs": { "caseSize": "36 mm", "material": "Oystersteel", "dial": "Black", "bezel": "Smooth", "bracelet": "Oyster, Oysterlock clasp", "movement": "Automatic, cal. 3230", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Faint hairlines on the bezel visible only at an angle.", "bracelet": "Tight.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+2.0 s/day", "amplitude": "290°", "service": "Not yet required." },
-      "provenance": "One owner. Purchased from an authorized dealer in Connecticut.",
-      "art": { "case": "round", "metal": "steel", "bezel": "smooth", "dial": "#121212", "texture": "gloss", "markers": "explorer", "hands": "mercedes", "complication": "none", "bracelet": "oyster", "caseScale": 0.92 }
+      "id": "rolex-daytona-126500ln",
+      "brand": "Rolex",
+      "family": "Daytona",
+      "model": "Cosmograph Daytona \"Panda\"",
+      "ref": "126500LN",
+      "year": 2024,
+      "featured": true,
+      "added": "2026-11-08",
+      "availability": "available",
+      "condition": "unworn",
+      "polished": false,
+      "price": 29900,
+      "priceOnRequest": true,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "March 2024",
+        "extras": [
+          "Hang tag",
+          "Green seal",
+          "Stickers on"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Oystersteel",
+        "dial": "White with black subdials",
+        "bezel": "Black Cerachrom tachymeter",
+        "bracelet": "Oyster, Oysterlock with Easylink",
+        "movement": "Automatic chronograph, Rolex cal. 4131",
+        "powerReserve": "Approx. 72 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Stickers on. Unworn.",
+        "bracelet": "Unsized, all links.",
+        "dial": "Flawless.",
+        "crystal": "Protective film on.",
+        "rate": "+0.8 s/day",
+        "amplitude": "294°",
+        "service": "Five-year Rolex warranty to 2029."
+      },
+      "provenance": "Unworn, sourced from a private client who received it at retail.",
+      "description": "The current Daytona, introduced in 2023 with the cal. 4131 and a slightly refined case and dial. White dial, black subdials and a black ceramic bezel: the Panda. Unworn with stickers and full set.",
+      "photos": [
+        {
+          "file": "Rolex Cosmograph Daytona Panda.jpg",
+          "alt": "Rolex Cosmograph Daytona 126500LN with white dial and black ceramic bezel on a green surface"
+        }
+      ]
     },
     {
-      "id": "rolex-datejust-36-126234-2017",
-      "brand": "Rolex", "family": "Datejust", "model": "Datejust 36", "ref": "126234", "year": 2017,
-      "featured": false, "added": "2026-09-30", "availability": "available",
-      "condition": "good", "polished": true, "price": 9600, "priceOnRequest": false,
-      "set": { "box": false, "papers": true, "papersDate": "November 2017", "extras": [] },
-      "specs": { "caseSize": "36 mm", "material": "Oystersteel and white gold", "dial": "Silver", "bezel": "Fluted white gold", "bracelet": "Jubilee, Oysterclasp", "movement": "Automatic, cal. 3235", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Polished. Visible wear on the clasp. Case lines softened slightly.", "bracelet": "Moderate stretch. Priced accordingly.", "dial": "Clean.", "crystal": "Clean.", "rate": "+4.0 s/day", "amplitude": "268°", "service": "Independent service 2023, documented." },
-      "provenance": "Third owner. Card only, original box not retained.",
-      "art": { "case": "round", "metal": "steel", "bezel": "fluted", "bezelMetal": "white", "dial": "#D9DBDC", "texture": "sunburst", "markers": "baton", "hands": "baton", "complication": "date", "bracelet": "jubilee", "caseScale": 0.92 }
+      "id": "rolex-daytona-16523",
+      "brand": "Rolex",
+      "family": "Daytona",
+      "model": "Cosmograph Daytona",
+      "ref": "16523",
+      "year": 1998,
+      "featured": false,
+      "added": "2026-10-12",
+      "availability": "available",
+      "condition": "good",
+      "polished": false,
+      "price": 17800,
+      "priceOnRequest": false,
+      "set": {
+        "box": false,
+        "papers": false,
+        "papersDate": null,
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel and 18k yellow gold",
+        "dial": "White with gold subdial rings",
+        "bezel": "Gold tachymeter",
+        "bracelet": "Two-tone Oyster",
+        "movement": "Automatic chronograph, Rolex cal. 4030",
+        "powerReserve": "Approx. 54 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Polished, edges softened. Priced to reflect it.",
+        "bracelet": "Stretch in the centre links.",
+        "dial": "Clean dial, original hands.",
+        "crystal": "Sapphire, two light marks at 8.",
+        "rate": "+4.0 s/day",
+        "amplitude": "259°",
+        "service": "Due for service. Price includes it on request."
+      },
+      "provenance": "Watch only, bought from the second owner with ID.",
+      "description": "Steel and gold Zenith Daytona at an honest price. It has been worn and polished, and we say so. Service can be included before delivery.",
+      "photos": [
+        {
+          "file": "Rolex Daytona ref. 16523, fine anni '90.jpg",
+          "alt": "Rolex Daytona 16523 in steel and yellow gold with white dial and gold subdial rings"
+        }
+      ]
     },
     {
-      "id": "rolex-oyster-perpetual-41-124300-2022",
-      "brand": "Rolex", "family": "Oyster Perpetual", "model": "Oyster Perpetual 41", "ref": "124300", "year": 2022,
-      "featured": false, "added": "2026-11-04", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 11200, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "January 2022", "extras": ["Hang tag"] },
-      "specs": { "caseSize": "41 mm", "material": "Oystersteel", "dial": "Turquoise", "bezel": "Smooth", "bracelet": "Oyster, Oysterclasp", "movement": "Automatic, cal. 3230", "powerReserve": "70 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Light marks on the clasp.", "bracelet": "Tight.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+1.1 s/day", "amplitude": "292°", "service": "Not yet required." },
-      "provenance": "One owner. Purchased from an authorized dealer in Miami.",
-      "art": { "case": "round", "metal": "steel", "bezel": "smooth", "dial": "#5BB8B0", "texture": "sunburst", "markers": "baton", "hands": "baton", "complication": "none", "bracelet": "oyster" }
+      "id": "rolex-datejust-36-126234",
+      "brand": "Rolex",
+      "family": "Datejust",
+      "model": "Datejust 36",
+      "ref": "126234",
+      "year": 2020,
+      "featured": true,
+      "added": "2026-11-07",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 11300,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "November 2020",
+        "extras": [
+          "Hang tag",
+          "Green seal"
+        ]
+      },
+      "specs": {
+        "caseSize": "36 mm",
+        "material": "Oystersteel and 18k white gold",
+        "dial": "Black sunburst, baton markers",
+        "bezel": "18k white gold fluted",
+        "bracelet": "Jubilee, Oysterclasp with Easylink",
+        "movement": "Automatic, Rolex cal. 3235",
+        "powerReserve": "Approx. 70 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Unpolished. Faint hairlines on the high-polish centre links only.",
+        "bracelet": "Tight Jubilee.",
+        "dial": "Flawless black sunburst.",
+        "crystal": "Clean.",
+        "rate": "+1.4 s/day",
+        "amplitude": "288°",
+        "service": "Rolex warranty to 2025, no service yet required."
+      },
+      "provenance": "One owner, purchased in New York.",
+      "description": "The modern Datejust 36 in steel with a white-gold fluted bezel, black sunburst dial and Jubilee bracelet. The cal. 3235 gives seventy hours of reserve. Full set, as presented here in its box.",
+      "photos": [
+        {
+          "file": "Rolex Datejust 36 - Black Sunburst Dial (50826887656).jpg",
+          "alt": "Rolex Datejust 36 126234 with black sunburst dial and fluted bezel on navy leather"
+        },
+        {
+          "file": "Rolex Datejust 36 - At an Angle (50826143003).jpg",
+          "alt": "Datejust 36 126234 seen at an angle showing the fluted bezel and Jubilee bracelet"
+        },
+        {
+          "file": "Rolex Datejust 36 - Presentation Ready (50826141683).jpg",
+          "alt": "Datejust 36 126234 on its cream presentation cushion"
+        },
+        {
+          "file": "Rolex Datejust 36 - Ready in the Box (50826141328).jpg",
+          "alt": "Datejust 36 126234 inside its green Rolex box with booklet"
+        }
+      ]
     },
     {
-      "id": "rolex-sky-dweller-326934-2021",
-      "brand": "Rolex", "family": "Sky-Dweller", "model": "Sky-Dweller", "ref": "326934", "year": 2021,
-      "featured": false, "added": "2026-10-08", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 17900, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "July 2021", "extras": [] },
-      "specs": { "caseSize": "42 mm", "material": "Oystersteel and white gold", "dial": "Blue", "bezel": "Fluted Ring Command", "bracelet": "Oyster, Oysterlock clasp", "movement": "Automatic annual calendar, cal. 9001", "powerReserve": "72 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Light desk marks on the clasp and lugs.", "bracelet": "Tight.", "dial": "Clean.", "crystal": "Clean.", "rate": "+2.2 s/day", "amplitude": "279°", "service": "Not yet required. Annual calendar checked through a full cycle." },
-      "provenance": "Second owner.",
-      "art": { "case": "round", "metal": "steel", "bezel": "fluted", "bezelMetal": "white", "dial": "#1F3B70", "texture": "sunburst", "markers": "baton", "hands": "baton", "complication": "date", "innerRing": true, "bracelet": "oyster", "caseScale": 1.04 }
+      "id": "rolex-explorer-14270",
+      "brand": "Rolex",
+      "family": "Explorer",
+      "model": "Explorer",
+      "ref": "14270",
+      "year": 2001,
+      "featured": false,
+      "added": "2026-10-18",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 6950,
+      "priceOnRequest": false,
+      "set": {
+        "box": false,
+        "papers": false,
+        "papersDate": null,
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "36 mm",
+        "material": "Stainless steel",
+        "dial": "Black gloss, 3-6-9 numerals",
+        "bezel": "Polished smooth steel",
+        "bracelet": "Oyster, Fliplock clasp",
+        "movement": "Automatic, Rolex cal. 3130",
+        "powerReserve": "Approx. 48 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Lightly polished.",
+        "bracelet": "Light stretch.",
+        "dial": "Clean dial, white-gold numerals.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+2.2 s/day",
+        "amplitude": "274°",
+        "service": "Serviced 2024."
+      },
+      "provenance": "Watch only, from a Brooklyn collector.",
+      "description": "The 36 mm Explorer in its first sapphire generation, made from 1989 to 2001. Simple, legible and correctly sized for most wrists, with the 3-6-9 dial that defines the line.",
+      "photos": [
+        {
+          "file": "152-rolex-explorer-ref-14270-circa-2001-mostra-store-aix-montres-vintage.jpg",
+          "alt": "Rolex Explorer 14270 with black 3-6-9 dial on an Oyster bracelet, studio photo on grey"
+        }
+      ]
     },
     {
-      "id": "rolex-daytona-126500ln-2023",
-      "brand": "Rolex", "family": "Daytona", "model": "Cosmograph Daytona", "ref": "126500LN", "year": 2023,
-      "featured": false, "added": "2026-09-14", "availability": "sold",
-      "condition": "unworn", "polished": false, "price": 31900, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "October 2023", "extras": ["Hang tag", "Green seal"] },
-      "specs": { "caseSize": "40 mm", "material": "Oystersteel", "dial": "Black", "bezel": "Black Cerachrom tachymeter", "bracelet": "Oyster, Oysterlock clasp", "movement": "Automatic chronograph, cal. 4131", "powerReserve": "72 hours", "water": "100 m" },
-      "report": { "case": "Unworn with stickers.", "bracelet": "Unsized.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+0.7 s/day", "amplitude": "301°", "service": "Not required." },
-      "provenance": "Sold to a client in Boston. Shown for reference. Ask us to source another.",
-      "art": { "case": "round", "metal": "steel", "bezel": "tachy", "bezelColors": ["#121212"], "dial": "#151515", "texture": "matte", "markers": "baton", "hands": "baton", "complication": "chrono3", "subdial": "#E8E6E0", "bracelet": "oyster", "crownGuards": true, "pushers": true }
+      "id": "rolex-explorer-ii-16550",
+      "brand": "Rolex",
+      "family": "Explorer II",
+      "model": "Explorer II \"Cream Dial\"",
+      "ref": "16550",
+      "year": 1986,
+      "featured": false,
+      "added": "2026-11-09",
+      "availability": "incoming",
+      "condition": "very-good",
+      "polished": false,
+      "price": 15800,
+      "priceOnRequest": false,
+      "set": {
+        "box": false,
+        "papers": false,
+        "papersDate": null,
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "40 mm",
+        "material": "Stainless steel",
+        "dial": "White, aged to cream",
+        "bezel": "Fixed steel 24-hour",
+        "bracelet": "Oyster",
+        "movement": "Automatic, Rolex cal. 3085",
+        "powerReserve": "Approx. 48 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Unpolished case with strong lines.",
+        "bracelet": "Period-correct Oyster with stretch.",
+        "dial": "Original dial evenly aged to cream; hour markers matching.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+3.0 s/day",
+        "amplitude": "270°",
+        "service": "Inspection in progress. Report updated on arrival."
+      },
+      "provenance": "Arriving from a European collection.",
+      "description": "The 16550 was made for only a few years in the mid-1980s and was the first Explorer II with an independent hour hand. Its white dials often aged to a soft cream, and those are the ones collectors hunt.",
+      "photos": [
+        {
+          "file": "Rolex Explorer II ref. 16550 Pannone, metà anni Ottanta.jpg",
+          "alt": "Rolex Explorer II 16550 with cream-coloured dial and steel 24-hour bezel"
+        }
+      ]
     },
     {
-      "id": "ap-royal-oak-15500st-2020",
-      "brand": "Audemars Piguet", "family": "Royal Oak", "model": "Royal Oak Selfwinding 41", "ref": "15500ST.OO.1220ST.01", "year": 2020,
-      "featured": true, "added": "2026-11-01", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 54500, "priceOnRequest": true,
-      "set": { "box": true, "papers": true, "papersDate": "December 2020", "extras": ["Extra links", "Travel pouch"] },
-      "specs": { "caseSize": "41 mm", "material": "Stainless steel", "dial": "Blue Grande Tapisserie", "bezel": "Octagonal, eight hexagonal screws", "bracelet": "Integrated steel bracelet, AP folding clasp", "movement": "Automatic, cal. 4302", "powerReserve": "70 hours", "water": "50 m" },
-      "report": { "case": "Unpolished. Brushed and polished surfaces crisp. Faint hairlines on the bezel facets.", "bracelet": "Tight. Two extra links included.", "dial": "Flawless tapisserie.", "crystal": "Clean.", "rate": "+2.6 s/day", "amplitude": "283°", "service": "Not yet required. Card dated December 2020." },
-      "provenance": "One owner. Purchased from an AP boutique in New York.",
-      "art": { "case": "octagon", "metal": "steel", "dial": "#22406E", "texture": "tapisserie", "markers": "baton", "hands": "baton", "complication": "date", "bracelet": "integrated" }
+      "id": "rolex-day-date-1803",
+      "brand": "Rolex",
+      "family": "Day-Date",
+      "model": "Day-Date 36",
+      "ref": "1803",
+      "year": 1978,
+      "featured": false,
+      "added": "2026-10-20",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 13900,
+      "priceOnRequest": false,
+      "set": {
+        "box": false,
+        "papers": true,
+        "papersDate": "1978",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "36 mm",
+        "material": "18k yellow gold",
+        "dial": "Champagne, baton markers",
+        "bezel": "18k gold fluted",
+        "bracelet": "Gold President",
+        "movement": "Automatic, Rolex cal. 1556",
+        "powerReserve": "Approx. 40 hours",
+        "water": "50 m"
+      },
+      "report": {
+        "case": "Polished at service. Strong case shape.",
+        "bracelet": "President bracelet with light stretch.",
+        "dial": "Original dial, crisp day and date.",
+        "crystal": "Acrylic, polished clear.",
+        "rate": "+3.8 s/day",
+        "amplitude": "262°",
+        "service": "Serviced 2023."
+      },
+      "provenance": "Original papers present. From an estate in Manhattan.",
+      "description": "The vintage President. A Day-Date 1803 in yellow gold with a champagne dial and the fluted bezel, from the decade before sapphire. It is the watch the Day-Date became famous as.",
+      "photos": [
+        {
+          "file": "Rolex Day Date ref. 1803, fine anni '70-primi anni '80.jpg",
+          "alt": "Rolex Day-Date 1803 in yellow gold with champagne dial and President bracelet"
+        }
+      ]
     },
     {
-      "id": "ap-royal-oak-15510st-2022",
-      "brand": "Audemars Piguet", "family": "Royal Oak", "model": "Royal Oak Selfwinding 41", "ref": "15510ST.OO.1320ST.03", "year": 2022,
-      "featured": false, "added": "2026-11-07", "availability": "incoming",
-      "condition": "excellent", "polished": false, "price": 58900, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "June 2022", "extras": [] },
-      "specs": { "caseSize": "41 mm", "material": "Stainless steel", "dial": "Black Grande Tapisserie", "bezel": "Octagonal, eight hexagonal screws", "bracelet": "Integrated steel bracelet, AP folding clasp", "movement": "Automatic, cal. 4302", "powerReserve": "70 hours", "water": "50 m" },
-      "report": { "case": "Arriving this week. Full report published after inspection.", "bracelet": "Pending inspection.", "dial": "Pending inspection.", "crystal": "Pending inspection.", "rate": "Pending", "amplitude": "Pending", "service": "Pending inspection." },
-      "provenance": "Incoming from a private collection. Reserve a first look by inquiry.",
-      "art": { "case": "octagon", "metal": "steel", "dial": "#18191B", "texture": "tapisserie", "markers": "baton", "hands": "baton", "complication": "date", "bracelet": "integrated" }
+      "id": "patek-nautilus-5711-1a-010",
+      "brand": "Patek Philippe",
+      "family": "Nautilus",
+      "model": "Nautilus",
+      "ref": "5711/1A-010",
+      "year": 2018,
+      "featured": true,
+      "added": "2026-11-05",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 118000,
+      "priceOnRequest": true,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2018",
+        "extras": [
+          "Certificate of Origin"
+        ]
+      },
+      "specs": {
+        "caseSize": "40 mm (40.5 mm, 10 to 4 o'clock)",
+        "material": "Stainless steel",
+        "dial": "Blue gradient, horizontal embossing",
+        "bezel": "Octagonal, satin and polished steel",
+        "bracelet": "Integrated steel Nautilus bracelet",
+        "movement": "Automatic, Patek Philippe cal. 324 S C",
+        "powerReserve": "35 to 45 hours",
+        "water": "120 m"
+      },
+      "report": {
+        "case": "Unpolished. Satin top and polished bevels crisp.",
+        "bracelet": "Tight. All links present.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "+1.0 s/day",
+        "amplitude": "282°",
+        "service": "Not yet required."
+      },
+      "provenance": "One owner. Original papers and certificate of origin.",
+      "description": "The steel Nautilus with the blue dial, discontinued in 2021 and the most requested watch of the past decade. This 2018 example is unpolished, which matters more on the Nautilus than almost any watch, because the satin and polish transitions cannot be redone perfectly.",
+      "photos": [
+        {
+          "file": "Patek-Philippe-Nautilus-5711-1A-010-1.jpg",
+          "alt": "Patek Philippe Nautilus 5711/1A-010 with blue horizontally embossed dial, studio photo on white"
+        },
+        {
+          "file": "Patek-Philippe-Nautilus-5711.jpg",
+          "alt": "Exploded view of the Patek Philippe Nautilus 5711 case, dial and bracelet components"
+        }
+      ]
     },
     {
-      "id": "ap-royal-oak-offshore-26470st-2019",
-      "brand": "Audemars Piguet", "family": "Royal Oak Offshore", "model": "Royal Oak Offshore Chronograph 42", "ref": "26470ST.OO.A104CR.01", "year": 2019,
-      "featured": false, "added": "2026-10-15", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 31500, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "March 2019", "extras": ["Spare rubber strap"] },
-      "specs": { "caseSize": "42 mm", "material": "Stainless steel", "dial": "Slate grey Méga Tapisserie", "bezel": "Octagonal, eight hexagonal screws", "bracelet": "Rubber strap, pin buckle", "movement": "Automatic chronograph, cal. 3126/3840", "powerReserve": "50 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Light marks on the pushers and crown guard.", "bracelet": "Original strap shows wear. New spare strap included.", "dial": "Clean.", "crystal": "Clean.", "rate": "+3.4 s/day", "amplitude": "271°", "service": "Not yet required." },
-      "provenance": "Second owner. Sourced from a collector in Long Island.",
-      "art": { "case": "octagon", "metal": "steel", "dial": "#4A4F55", "texture": "tapisserie", "markers": "arabic", "hands": "baton", "complication": "chrono3", "subdial": "#3A3E43", "bracelet": "rubber", "pushers": true, "caseScale": 1.05 }
+      "id": "patek-calatrava-3919g",
+      "brand": "Patek Philippe",
+      "family": "Calatrava",
+      "model": "Calatrava",
+      "ref": "3919G",
+      "year": 1993,
+      "featured": false,
+      "added": "2026-10-15",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 15500,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": false,
+        "papersDate": null,
+        "extras": [
+          "Patek Philippe box"
+        ]
+      },
+      "specs": {
+        "caseSize": "33.5 mm",
+        "material": "18k white gold",
+        "dial": "White enamel-style, black Roman numerals, small seconds",
+        "bezel": "Clous de Paris hobnail",
+        "bracelet": "Black leather strap, gold buckle",
+        "movement": "Manual winding, Patek Philippe cal. 215 PS",
+        "powerReserve": "Approx. 44 hours",
+        "water": "25 m"
+      },
+      "report": {
+        "case": "Light hairlines. Hobnail bezel crisp.",
+        "bracelet": "New strap, original buckle.",
+        "dial": "Clean dial.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+2.5 s/day",
+        "amplitude": "279°",
+        "service": "Serviced 2022."
+      },
+      "provenance": "Second owner, original box present.",
+      "description": "A Calatrava in its classic form: small, hand-wound and finished with a hobnail bezel. The 3919 has been made in yellow, rose and white gold; white gold is the least common and the most discreet.",
+      "photos": [
+        {
+          "file": "Patek Philippe Calatrava ref. 3919G risalente ai primi anni Novanta.jpg",
+          "alt": "Patek Philippe Calatrava 3919G with white dial, Roman numerals and hobnail bezel"
+        }
+      ]
     },
     {
-      "id": "patek-nautilus-5711-1a-2019",
-      "brand": "Patek Philippe", "family": "Nautilus", "model": "Nautilus", "ref": "5711/1A-010", "year": 2019,
-      "featured": true, "added": "2026-10-26", "availability": "on-hold",
-      "condition": "excellent", "polished": false, "price": 112000, "priceOnRequest": true,
-      "set": { "box": true, "papers": true, "papersDate": "February 2019", "extras": ["Certificate of origin", "Travel case"] },
-      "specs": { "caseSize": "40 mm", "material": "Stainless steel", "dial": "Blue-black gradient, embossed horizontal", "bezel": "Octagonal, rounded", "bracelet": "Integrated steel bracelet, fold-over clasp", "movement": "Automatic, cal. 26-330 S C", "powerReserve": "45 hours", "water": "120 m" },
-      "report": { "case": "Unpolished. Faint hairlines on the bezel only.", "bracelet": "Tight. No stretch.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+1.0 s/day", "amplitude": "278°", "service": "Not yet required." },
-      "provenance": "One owner. Full set with Patek Philippe certificate of origin.",
-      "art": { "case": "cushion", "metal": "steel", "dial": "#1E3456", "texture": "horizontal", "markers": "baton", "hands": "baton", "complication": "date", "bracelet": "integrated" }
+      "id": "ap-royal-oak-15202st",
+      "brand": "Audemars Piguet",
+      "family": "Royal Oak",
+      "model": "Royal Oak \"Jumbo\" Extra-Thin",
+      "ref": "15202ST",
+      "year": 2015,
+      "featured": true,
+      "added": "2026-11-03",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 92000,
+      "priceOnRequest": true,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2015",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "39 mm",
+        "material": "Stainless steel",
+        "dial": "Blue Petite Tapisserie",
+        "bezel": "Octagonal steel with eight hexagonal screws",
+        "bracelet": "Integrated steel Royal Oak bracelet",
+        "movement": "Automatic, Audemars Piguet cal. 2121",
+        "powerReserve": "Approx. 40 hours",
+        "water": "50 m"
+      },
+      "report": {
+        "case": "Unpolished. Factory brushing intact.",
+        "bracelet": "Tight.",
+        "dial": "Clean blue Petite Tapisserie dial.",
+        "crystal": "Clean.",
+        "rate": "+1.7 s/day",
+        "amplitude": "277°",
+        "service": "Serviced by AP 2022."
+      },
+      "provenance": "Second owner. Full set.",
+      "description": "The 15202 is the direct descendant of Gérald Genta's 1972 Royal Oak: 39 mm, extra-thin, the cal. 2121 and the blue Petite Tapisserie dial. It was replaced in 2022, and the original remains the reference collectors measure every other Royal Oak against.",
+      "photos": [
+        {
+          "file": "Audemars Piguet Royal Oak ref. 15202.jpg",
+          "alt": "Audemars Piguet Royal Oak 15202 with blue Petite Tapisserie dial on the wrist"
+        }
+      ]
     },
     {
-      "id": "patek-aquanaut-5167a-2021",
-      "brand": "Patek Philippe", "family": "Aquanaut", "model": "Aquanaut", "ref": "5167A-001", "year": 2021,
-      "featured": false, "added": "2026-10-21", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 74500, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "May 2021", "extras": ["Second strap (black)", "Certificate of origin"] },
-      "specs": { "caseSize": "40.8 mm", "material": "Stainless steel", "dial": "Black embossed", "bezel": "Octagonal, rounded", "bracelet": "Composite Tropical strap, fold-over clasp", "movement": "Automatic, cal. 26-330 S C", "powerReserve": "45 hours", "water": "120 m" },
-      "report": { "case": "Unpolished. Light marks on the clasp only.", "bracelet": "Strap supple. No cracking.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+1.6 s/day", "amplitude": "280°", "service": "Not yet required." },
+      "id": "ap-royal-oak-chronograph-25860st",
+      "brand": "Audemars Piguet",
+      "family": "Royal Oak",
+      "model": "Royal Oak Chronograph",
+      "ref": "25860ST",
+      "year": 2004,
+      "featured": false,
+      "added": "2026-10-26",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 28500,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2004",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "39 mm",
+        "material": "Stainless steel",
+        "dial": "Silver Tapisserie, three subdials",
+        "bezel": "Octagonal steel",
+        "bracelet": "Integrated steel bracelet",
+        "movement": "Automatic chronograph, Audemars Piguet cal. 2385",
+        "powerReserve": "Approx. 40 hours",
+        "water": "50 m"
+      },
+      "report": {
+        "case": "Light hairlines on the bracelet.",
+        "bracelet": "Tight.",
+        "dial": "Clean silver dial.",
+        "crystal": "Clean.",
+        "rate": "+2.0 s/day",
+        "amplitude": "275°",
+        "service": "Serviced 2023."
+      },
+      "provenance": "Full set, second owner.",
+      "description": "The 39 mm Royal Oak Chronograph of the 2000s, before the case grew to 41 mm. Proportions close to the original Royal Oak and a silver dial that wears lighter than blue or black.",
+      "photos": [
+        {
+          "file": "Audemars 2385 Royal Oak resized.jpg",
+          "alt": "Audemars Piguet Royal Oak Chronograph 25860ST with silver dial, in its AP presentation box"
+        },
+        {
+          "file": "Audemars 2385.jpg",
+          "alt": "Royal Oak Chronograph 25860ST in its box with the Audemars Piguet card"
+        }
+      ]
+    },
+    {
+      "id": "ap-royal-oak-offshore-diver-15720st",
+      "brand": "Audemars Piguet",
+      "family": "Royal Oak Offshore",
+      "model": "Royal Oak Offshore Diver",
+      "ref": "15720ST",
+      "year": 2021,
+      "featured": false,
+      "added": "2026-10-24",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 27900,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2021",
+        "extras": [
+          "Extra strap"
+        ]
+      },
+      "specs": {
+        "caseSize": "42 mm",
+        "material": "Stainless steel",
+        "dial": "Khaki green Méga Tapisserie",
+        "bezel": "Inner rotating diving scale",
+        "bracelet": "Green rubber strap",
+        "movement": "Automatic, Audemars Piguet cal. 4308",
+        "powerReserve": "Approx. 60 hours",
+        "water": "300 m"
+      },
+      "report": {
+        "case": "Unpolished.",
+        "bracelet": "Strap in good condition.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "+1.3 s/day",
+        "amplitude": "286°",
+        "service": "Under warranty."
+      },
+      "provenance": "One owner. Full set.",
+      "description": "The Offshore Diver in steel with a khaki green dial and matching rubber strap. The second crown turns the inner diving scale. Sporty and robust.",
+      "photos": [
+        {
+          "file": "Audemars Piguet Royal Oak Offshore Diver.jpg",
+          "alt": "Audemars Piguet Royal Oak Offshore Diver 15720ST with green Méga Tapisserie dial and green rubber strap"
+        }
+      ]
+    },
+    {
+      "id": "omega-speedmaster-145-012-67",
+      "brand": "Omega",
+      "family": "Speedmaster",
+      "model": "Speedmaster Professional \"Pre-Moon\"",
+      "ref": "145.012-67",
+      "year": 1967,
+      "featured": true,
+      "added": "2026-10-29",
+      "availability": "available",
+      "condition": "good",
+      "polished": false,
+      "price": 11500,
+      "priceOnRequest": false,
+      "set": {
+        "box": false,
+        "papers": false,
+        "papersDate": null,
+        "extras": [
+          "Omega 1171 bracelet"
+        ]
+      },
+      "specs": {
+        "caseSize": "42 mm",
+        "material": "Stainless steel",
+        "dial": "Black, step dial",
+        "bezel": "Black aluminium tachymeter",
+        "bracelet": "Omega 1171/633 steel bracelet",
+        "movement": "Manual winding chronograph, Omega cal. 321",
+        "powerReserve": "Approx. 44 hours",
+        "water": "Vintage, not rated for water"
+      },
+      "report": {
+        "case": "Honest wear, unpolished lugs.",
+        "bracelet": "Period-correct 1171 bracelet.",
+        "dial": "Original dial and hands, aged lume.",
+        "crystal": "Hesalite, light marks.",
+        "rate": "+4.5 s/day",
+        "amplitude": "252°",
+        "service": "Serviced 2021."
+      },
+      "provenance": "From a collector in New Jersey.",
+      "description": "A 145.012, the Speedmaster reference worn on the moon by Apollo astronauts, with the column-wheel cal. 321. It is a genuinely historic watch and wears its age with honesty.",
+      "photos": [
+        {
+          "file": "Vintage Omega Speedmaster \"Pre-moon\".jpg",
+          "alt": "Vintage Omega Speedmaster Professional 145.012-67 with black dial and tachymeter bezel on an 1171 bracelet"
+        }
+      ]
+    },
+    {
+      "id": "omega-seamaster-chrono-diver-2225-80",
+      "brand": "Omega",
+      "family": "Seamaster",
+      "model": "Seamaster 300M Chrono Diver",
+      "ref": "2225.80.00",
+      "year": 2003,
+      "featured": false,
+      "added": "2026-10-16",
+      "availability": "available",
+      "condition": "very-good",
+      "polished": false,
+      "price": 3100,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2003",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "41.5 mm",
+        "material": "Stainless steel",
+        "dial": "Blue wave",
+        "bezel": "Blue aluminium, unidirectional",
+        "bracelet": "Steel Seamaster bracelet",
+        "movement": "Automatic chronograph, Omega cal. 1154",
+        "powerReserve": "Approx. 42 hours",
+        "water": "300 m"
+      },
+      "report": {
+        "case": "Light hairlines.",
+        "bracelet": "Tight.",
+        "dial": "Clean blue wave dial.",
+        "crystal": "Sapphire, clean.",
+        "rate": "+2.8 s/day",
+        "amplitude": "270°",
+        "service": "Serviced 2023."
+      },
+      "provenance": "Full set, second owner.",
+      "description": "The chronograph version of the Bond-era Seamaster 300M with the blue wave dial and helium escape valve. A lot of watch for the money.",
+      "photos": [
+        {
+          "file": "Omega Seamaster chronograph watch (300 meters water resist) (cropped).jpg",
+          "alt": "Omega Seamaster 300M Chrono Diver 2225.80.00 with blue wave dial and blue bezel"
+        },
+        {
+          "file": "Omega-Seamaster-p1020458.jpg",
+          "alt": "Omega Seamaster 300M Chrono Diver 2225.80.00 lying on a white surface"
+        },
+        {
+          "file": "Omega-Seamaster-p1020461.jpg",
+          "alt": "Case back and bracelet of the Seamaster 300M Chrono Diver 2225.80.00"
+        }
+      ]
+    },
+    {
+      "id": "cartier-tank-solo-xl-3800",
+      "brand": "Cartier",
+      "family": "Tank",
+      "model": "Tank Solo XL",
+      "ref": "3800",
+      "year": 2017,
+      "featured": false,
+      "added": "2026-10-14",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 3350,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2017",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "31 x 40.85 mm",
+        "material": "Stainless steel",
+        "dial": "Silvered opaline, black Roman numerals",
+        "bezel": "None",
+        "bracelet": "Black alligator strap, steel buckle",
+        "movement": "Automatic, Cartier cal. 049",
+        "powerReserve": "Approx. 42 hours",
+        "water": "30 m"
+      },
+      "report": {
+        "case": "Light hairlines.",
+        "bracelet": "Strap in good condition.",
+        "dial": "Clean.",
+        "crystal": "Clean.",
+        "rate": "+2.9 s/day",
+        "amplitude": "276°",
+        "service": "Not yet required."
+      },
       "provenance": "One owner.",
-      "art": { "case": "cushion", "metal": "steel", "dial": "#191A1C", "texture": "grid", "markers": "arabic", "hands": "baton", "complication": "date", "bracelet": "rubber" }
+      "description": "The large automatic Tank Solo with a silvered dial, Roman numerals and blue sword hands. Classic Cartier proportions in steel.",
+      "photos": [
+        {
+          "file": "Cartier Tank Solo XL ref. 3800.jpg",
+          "alt": "Cartier Tank Solo XL 3800 with silvered dial, Roman numerals and black strap on the wrist"
+        }
+      ]
     },
     {
-      "id": "patek-calatrava-5227g-2016",
-      "brand": "Patek Philippe", "family": "Calatrava", "model": "Calatrava", "ref": "5227G-001", "year": 2016,
-      "featured": false, "added": "2026-09-22", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 26500, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "September 2016", "extras": ["Extract from the archives"] },
-      "specs": { "caseSize": "39 mm", "material": "18k white gold", "dial": "Ivory lacquer", "bezel": "Smooth, hinged hunter case back", "bracelet": "Black alligator strap, fold-over clasp", "movement": "Automatic, cal. 324 S C", "powerReserve": "45 hours", "water": "30 m" },
-      "report": { "case": "Unpolished. Light marks consistent with dress wear.", "bracelet": "Strap shows light creasing. Fresh strap available on request.", "dial": "Clean.", "crystal": "Clean.", "rate": "+2.8 s/day", "amplitude": "275°", "service": "Patek Philippe service 2025 with papers." },
-      "provenance": "Second owner. Serviced by Patek Philippe New York in 2025.",
-      "art": { "case": "round", "metal": "white", "bezel": "smooth", "dial": "#EFE8D8", "texture": "matte", "markers": "baton", "hands": "dauphine", "complication": "date", "bracelet": "leather", "strap": "#1B1716", "caseScale": 0.95, "thinBezel": true }
+      "id": "tudor-black-bay-58-18k-m79018v",
+      "brand": "Tudor",
+      "family": "Black Bay",
+      "model": "Black Bay Fifty-Eight 18K",
+      "ref": "M79018V",
+      "year": 2022,
+      "featured": false,
+      "added": "2026-10-19",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 27500,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2022",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "39 mm",
+        "material": "18k yellow gold",
+        "dial": "Green, domed",
+        "bezel": "Green aluminium, unidirectional",
+        "bracelet": "Green fabric strap, gold buckle",
+        "movement": "Automatic, Tudor cal. MT5400",
+        "powerReserve": "Approx. 70 hours",
+        "water": "200 m"
+      },
+      "report": {
+        "case": "Unpolished.",
+        "bracelet": "Strap in good condition.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "+1.5 s/day",
+        "amplitude": "285°",
+        "service": "Under warranty."
+      },
+      "provenance": "One owner. Full set.",
+      "description": "Tudor's first watch in solid gold, the Black Bay Fifty-Eight in 18k yellow gold with a green dial and green bezel.",
+      "photos": [
+        {
+          "file": "Tudor Black Bay 58 ref. M79018V, primo modello di casa Tudor interamente in oro.jpg",
+          "alt": "Tudor Black Bay Fifty-Eight 18K M79018V in yellow gold with green dial and bezel"
+        }
+      ]
     },
     {
-      "id": "omega-speedmaster-310-30-42-50-01-001-2022",
-      "brand": "Omega", "family": "Speedmaster", "model": "Speedmaster Moonwatch Professional", "ref": "310.30.42.50.01.001", "year": 2022,
-      "featured": false, "added": "2026-10-29", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 6350, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "April 2022", "extras": ["Moonwatch booklet"] },
-      "specs": { "caseSize": "42 mm", "material": "Stainless steel", "dial": "Black step dial", "bezel": "Black aluminium tachymeter", "bracelet": "Steel bracelet", "movement": "Manual chronograph, cal. 3861", "powerReserve": "50 hours", "water": "50 m" },
-      "report": { "case": "Unpolished. Light marks on the bracelet.", "bracelet": "Tight.", "dial": "Flawless.", "crystal": "Hesalite, no scratches.", "rate": "+1.9 s/day", "amplitude": "282°", "service": "Not yet required." },
-      "provenance": "One owner.",
-      "art": { "case": "round", "metal": "steel", "bezel": "tachy", "bezelColors": ["#141414"], "dial": "#141414", "texture": "matte", "markers": "baton", "hands": "baton", "complication": "chrono3", "subdial": "#1E1E1E", "bracelet": "oyster", "pushers": true, "caseScale": 1.03 }
+      "id": "tudor-black-bay-54-m79000n",
+      "brand": "Tudor",
+      "family": "Black Bay",
+      "model": "Black Bay 54",
+      "ref": "M79000N-0001",
+      "year": 2023,
+      "featured": false,
+      "added": "2026-11-01",
+      "availability": "available",
+      "condition": "unworn",
+      "polished": false,
+      "price": 3650,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2023",
+        "extras": [
+          "Hang tag"
+        ]
+      },
+      "specs": {
+        "caseSize": "37 mm",
+        "material": "Stainless steel",
+        "dial": "Black, domed",
+        "bezel": "Black aluminium, unidirectional",
+        "bracelet": "Steel riveted-style bracelet",
+        "movement": "Automatic, Tudor cal. MT5400",
+        "powerReserve": "Approx. 70 hours",
+        "water": "200 m"
+      },
+      "report": {
+        "case": "Unworn.",
+        "bracelet": "Unsized.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "+1.0 s/day",
+        "amplitude": "291°",
+        "service": "Warranty to 2028."
+      },
+      "provenance": "Unworn.",
+      "description": "Tudor's smallest Black Bay, a 37 mm diver with a domed black dial. Compact and wearable.",
+      "photos": [
+        {
+          "file": "Tudor Black Bay 54 ref. m79000n-0001.jpg",
+          "alt": "Tudor Black Bay 54 M79000N-0001 with black dial and bezel on the wrist"
+        }
+      ]
     },
     {
-      "id": "omega-seamaster-300m-210-30-42-20-03-001-2021",
-      "brand": "Omega", "family": "Seamaster", "model": "Seamaster Diver 300M", "ref": "210.30.42.20.03.001", "year": 2021,
-      "featured": false, "added": "2026-10-03", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 4400, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "August 2021", "extras": [] },
-      "specs": { "caseSize": "42 mm", "material": "Stainless steel", "dial": "Blue wave ceramic", "bezel": "Blue ceramic dive bezel", "bracelet": "Steel bracelet", "movement": "Automatic, cal. 8800", "powerReserve": "55 hours", "water": "300 m" },
-      "report": { "case": "Light desk marks. Unpolished.", "bracelet": "Light wear.", "dial": "Clean.", "crystal": "Clean.", "rate": "+2.9 s/day", "amplitude": "274°", "service": "Not yet required." },
-      "provenance": "Second owner.",
-      "art": { "case": "round", "metal": "steel", "bezel": "dive", "bezelColors": ["#1C3A6B"], "dial": "#203E72", "texture": "waves", "markers": "dive", "hands": "baton", "complication": "date", "bracelet": "oyster", "caseScale": 1.02 }
-    },
-    {
-      "id": "cartier-santos-wssa0029-2021",
-      "brand": "Cartier", "family": "Santos", "model": "Santos de Cartier Large", "ref": "WSSA0029", "year": 2021,
-      "featured": false, "added": "2026-10-17", "availability": "available",
-      "condition": "excellent", "polished": false, "price": 6900, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "November 2021", "extras": ["Leather strap (QuickSwitch)"] },
-      "specs": { "caseSize": "39.8 mm", "material": "Stainless steel", "dial": "Silvered opaline", "bezel": "Square, eight screws", "bracelet": "Steel bracelet, SmartLink", "movement": "Automatic, cal. 1847 MC", "powerReserve": "42 hours", "water": "100 m" },
-      "report": { "case": "Unpolished. Light marks on the bezel corners.", "bracelet": "Tight.", "dial": "Flawless.", "crystal": "Clean.", "rate": "+3.3 s/day", "amplitude": "270°", "service": "Not yet required." },
-      "provenance": "One owner.",
-      "art": { "case": "square", "metal": "steel", "dial": "#E9E7E1", "texture": "matte", "markers": "roman", "hands": "sword", "handColor": "#2B3F7A", "complication": "none", "bracelet": "integrated" }
-    },
-    {
-      "id": "tudor-black-bay-58-m79030n-2020",
-      "brand": "Tudor", "family": "Black Bay", "model": "Black Bay Fifty-Eight", "ref": "M79030N-0001", "year": 2020,
-      "featured": false, "added": "2026-10-12", "availability": "available",
-      "condition": "very-good", "polished": false, "price": 3450, "priceOnRequest": false,
-      "set": { "box": true, "papers": true, "papersDate": "October 2020", "extras": ["Fabric strap"] },
-      "specs": { "caseSize": "39 mm", "material": "Stainless steel", "dial": "Black, gilt accents", "bezel": "Black aluminium, gilt", "bracelet": "Riveted steel bracelet", "movement": "Automatic, cal. MT5402", "powerReserve": "70 hours", "water": "200 m" },
-      "report": { "case": "Light desk marks. Unpolished.", "bracelet": "Light wear.", "dial": "Clean.", "crystal": "Clean.", "rate": "+2.5 s/day", "amplitude": "277°", "service": "Not yet required." },
-      "provenance": "Second owner.",
-      "art": { "case": "round", "metal": "steel", "bezel": "dive", "bezelColors": ["#151515"], "bezelInk": "#C8A766", "dial": "#121212", "texture": "matte", "markers": "dive", "markerColor": "#C8A766", "hands": "snowflake", "complication": "none", "bracelet": "rivet", "caseScale": 0.94 }
+      "id": "grand-seiko-sbga011-snowflake",
+      "brand": "Grand Seiko",
+      "family": "Heritage",
+      "model": "Spring Drive \"Snowflake\"",
+      "ref": "SBGA011",
+      "year": 2016,
+      "featured": false,
+      "added": "2026-10-21",
+      "availability": "available",
+      "condition": "excellent",
+      "polished": false,
+      "price": 5200,
+      "priceOnRequest": false,
+      "set": {
+        "box": true,
+        "papers": true,
+        "papersDate": "2016",
+        "extras": []
+      },
+      "specs": {
+        "caseSize": "41 mm",
+        "material": "High-intensity titanium",
+        "dial": "White Snowflake texture",
+        "bezel": "Polished titanium",
+        "bracelet": "Titanium bracelet",
+        "movement": "Spring Drive, Grand Seiko cal. 9R65",
+        "powerReserve": "Approx. 72 hours",
+        "water": "100 m"
+      },
+      "report": {
+        "case": "Light hairlines.",
+        "bracelet": "Tight.",
+        "dial": "Flawless.",
+        "crystal": "Clean.",
+        "rate": "±1 s/day",
+        "amplitude": "n/a, Spring Drive",
+        "service": "Not yet required."
+      },
+      "provenance": "Full set.",
+      "description": "The Snowflake, Grand Seiko's most famous dial. A titanium case, the gliding seconds hand of Spring Drive and a dial textured to recall snow in the mountains above Shiojiri.",
+      "photos": [
+        {
+          "file": "Grand Seiko SBGA011.jpg",
+          "alt": "Grand Seiko SBGA011 Snowflake in titanium with white textured dial, photographed on a dark background"
+        }
+      ]
     }
   ]
 }

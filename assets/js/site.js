@@ -399,11 +399,43 @@
     $$('[data-view]', gallery).forEach(btn => btn.addEventListener('click', () => {
       setZoom(false);
       $$('[data-view]', gallery).forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
-      const swap = () => { img.src = btn.dataset.view; img.alt = btn.dataset.alt; img.style.opacity = 1; };
+      const swap = () => {
+        img.srcset = btn.dataset.srcset; img.src = btn.dataset.view; img.alt = btn.dataset.alt;
+        img.width = +btn.dataset.w; img.height = +btn.dataset.h; img.dataset.full = btn.dataset.full;
+        const cr = $('[data-g-credit]', gallery); if (cr) cr.textContent = btn.dataset.credit;
+        img.style.opacity = 1;
+      };
       if (reduceMotion) return swap();
       img.style.opacity = 0;
       setTimeout(swap, 180);
     }));
+  }
+
+  const lb = $('[data-lightbox]');
+  if (gallery && lb && lb.showModal) {
+    const lbImg = $('[data-lb-img]', lb);
+    const gImg = $('[data-g-img]', gallery);
+    const thumbs = $$('[data-view]', gallery);
+    let at = 0;
+    const show = i => {
+      at = (i + thumbs.length) % thumbs.length;
+      const t = thumbs[at];
+      lbImg.src = t ? t.dataset.full : gImg.dataset.full;
+      lbImg.alt = t ? t.dataset.alt : gImg.alt;
+    };
+    $('[data-lightbox-open]', gallery).addEventListener('click', () => {
+      at = Math.max(0, thumbs.findIndex(b => b.getAttribute('aria-pressed') === 'true'));
+      if (thumbs.length) show(at); else { lbImg.src = gImg.dataset.full; lbImg.alt = gImg.alt; }
+      lb.showModal();
+    });
+    $('[data-lightbox-close]', lb).addEventListener('click', () => lb.close());
+    $$('[data-lb-step]', lb).forEach(b => b.addEventListener('click', () => show(at + Number(b.dataset.lbStep))));
+    lb.addEventListener('click', e => e.target === lb && lb.close());
+    lb.addEventListener('keydown', e => {
+      if (!thumbs.length) return;
+      if (e.key === 'ArrowRight') show(at + 1);
+      if (e.key === 'ArrowLeft') show(at - 1);
+    });
   }
 
   const sticky = $('[data-sticky]');

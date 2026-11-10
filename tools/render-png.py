@@ -24,8 +24,8 @@ body {{ margin:0; width:1200px; height:630px; background: radial-gradient(90% 12
 .eb {{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; color:#ABA59B; margin-bottom:18px; }}
 h1 {{ font-family:D; font-weight:400; font-size:68px; line-height:1.02; margin:0 0 22px; }}
 .ln {{ font-size:20px; color:#ABA59B; }}
-img {{ width:520px; height:520px; }}
-</style></head><body><div class="copy"><div class="wm">{html.escape(cfg['brand']['name'])}</div><div class="eb">{html.escape(eyebrow)}</div><h1>{html.escape(title)}</h1><div class="ln">{html.escape(line)}</div></div><img src="{data_uri(img, 'image/svg+xml')}"></body></html>"""
+img {{ width:520px; height:630px; object-fit:cover; }}
+</style></head><body><div class="copy"><div class="wm">{html.escape(cfg['brand']['name'])}</div><div class="eb">{html.escape(eyebrow)}</div><h1>{html.escape(title)}</h1><div class="ln">{html.escape(line)}</div></div><img src="{data_uri(img, 'image/webp')}"></body></html>"""
 
 def main():
     ap = argparse.ArgumentParser()

@@ -2,155 +2,169 @@
  "site": {
   "title": "GreyVault",
   "line": "Pre-owned Rolex, Audemars Piguet and Patek Philippe, inspected on 47th Street.",
-  "img": "assets/watches/rolex-submariner-126610ln-2021-front.svg"
+  "img": "assets/photos/rolex-submariner-16610-1-1600.webp"
  },
  "products": [
   {
-   "id": "rolex-submariner-126610ln-2021",
+   "id": "rolex-submariner-16610",
    "brand": "Rolex",
    "model": "Submariner Date",
-   "line": "Ref. 126610LN · 2021 · Excellent · $14,250",
-   "img": "assets/watches/rolex-submariner-126610ln-2021-front.svg"
+   "line": "Ref. 16610 · 2003 · Very good · $10,950",
+   "img": "assets/photos/rolex-submariner-16610-1-1600.webp"
   },
   {
-   "id": "rolex-submariner-126610lv-2022",
+   "id": "rolex-submariner-16613-blue",
    "brand": "Rolex",
-   "model": "Submariner Date “Starbucks”",
-   "line": "Ref. 126610LV · 2022 · Very good · $16,900",
-   "img": "assets/watches/rolex-submariner-126610lv-2022-front.svg"
+   "model": "Submariner Date \"Bluesy\"",
+   "line": "Ref. 16613 · 1999 · Very good · $12,400",
+   "img": "assets/photos/rolex-submariner-16613-blue-1-1600.webp"
   },
   {
-   "id": "rolex-gmt-master-ii-126710blro-2023",
+   "id": "rolex-submariner-14060m",
    "brand": "Rolex",
-   "model": "GMT-Master II “Pepsi”",
-   "line": "Ref. 126710BLRO · 2023 · Unworn · $21,800",
-   "img": "assets/watches/rolex-gmt-master-ii-126710blro-2023-front.svg"
+   "model": "Submariner (No Date)",
+   "line": "Ref. 14060M · 2005 · Excellent · $8,900",
+   "img": "assets/photos/rolex-submariner-14060m-1-1600.webp"
   },
   {
-   "id": "rolex-daytona-116500ln-2019",
+   "id": "rolex-gmt-master-ii-16710",
+   "brand": "Rolex",
+   "model": "GMT-Master II",
+   "line": "Ref. 16710 · 2001 · Excellent · $13,500",
+   "img": "assets/photos/rolex-gmt-master-ii-16710-1-1600.webp"
+  },
+  {
+   "id": "rolex-gmt-master-ii-116710blnr",
+   "brand": "Rolex",
+   "model": "GMT-Master II \"Batman\"",
+   "line": "Ref. 116710BLNR · 2016 · Excellent · $17,200",
+   "img": "assets/photos/rolex-gmt-master-ii-116710blnr-1-480.webp"
+  },
+  {
+   "id": "rolex-daytona-16528-yellow-gold",
    "brand": "Rolex",
    "model": "Cosmograph Daytona",
-   "line": "Ref. 116500LN · 2019 · Excellent · Price on request",
-   "img": "assets/watches/rolex-daytona-116500ln-2019-front.svg"
+   "line": "Ref. 16528 · 1994 · Very good · Price on request",
+   "img": "assets/photos/rolex-daytona-16528-yellow-gold-1-1600.webp"
   },
   {
-   "id": "rolex-datejust-41-126334-2020",
+   "id": "rolex-daytona-126500ln",
    "brand": "Rolex",
-   "model": "Datejust 41",
-   "line": "Ref. 126334 · 2020 · Very good · $12,450",
-   "img": "assets/watches/rolex-datejust-41-126334-2020-front.svg"
+   "model": "Cosmograph Daytona \"Panda\"",
+   "line": "Ref. 126500LN · 2024 · Unworn · Price on request",
+   "img": "assets/photos/rolex-daytona-126500ln-1-960.webp"
   },
   {
-   "id": "rolex-day-date-40-228238-2018",
+   "id": "rolex-daytona-16523",
    "brand": "Rolex",
-   "model": "Day-Date 40",
-   "line": "Ref. 228238 · 2018 · Excellent · $38,500",
-   "img": "assets/watches/rolex-day-date-40-228238-2018-front.svg"
+   "model": "Cosmograph Daytona",
+   "line": "Ref. 16523 · 1998 · Good · $17,800",
+   "img": "assets/photos/rolex-daytona-16523-1-960.webp"
   },
   {
-   "id": "rolex-explorer-124270-2022",
-   "brand": "Rolex",
-   "model": "Explorer 36",
-   "line": "Ref. 124270 · 2022 · Excellent · $8,950",
-   "img": "assets/watches/rolex-explorer-124270-2022-front.svg"
-  },
-  {
-   "id": "rolex-datejust-36-126234-2017",
+   "id": "rolex-datejust-36-126234",
    "brand": "Rolex",
    "model": "Datejust 36",
-   "line": "Ref. 126234 · 2017 · Good · $9,600",
-   "img": "assets/watches/rolex-datejust-36-126234-2017-front.svg"
+   "line": "Ref. 126234 · 2020 · Excellent · $11,300",
+   "img": "assets/photos/rolex-datejust-36-126234-1-1600.webp"
   },
   {
-   "id": "rolex-oyster-perpetual-41-124300-2022",
+   "id": "rolex-explorer-14270",
    "brand": "Rolex",
-   "model": "Oyster Perpetual 41",
-   "line": "Ref. 124300 · 2022 · Excellent · $11,200",
-   "img": "assets/watches/rolex-oyster-perpetual-41-124300-2022-front.svg"
+   "model": "Explorer",
+   "line": "Ref. 14270 · 2001 · Very good · $6,950",
+   "img": "assets/photos/rolex-explorer-14270-1-480.webp"
   },
   {
-   "id": "rolex-sky-dweller-326934-2021",
+   "id": "rolex-explorer-ii-16550",
    "brand": "Rolex",
-   "model": "Sky-Dweller",
-   "line": "Ref. 326934 · 2021 · Very good · $17,900",
-   "img": "assets/watches/rolex-sky-dweller-326934-2021-front.svg"
+   "model": "Explorer II \"Cream Dial\"",
+   "line": "Ref. 16550 · 1986 · Very good · $15,800",
+   "img": "assets/photos/rolex-explorer-ii-16550-1-960.webp"
   },
   {
-   "id": "rolex-daytona-126500ln-2023",
+   "id": "rolex-day-date-1803",
    "brand": "Rolex",
-   "model": "Cosmograph Daytona",
-   "line": "Ref. 126500LN · 2023 · Unworn · Sold",
-   "img": "assets/watches/rolex-daytona-126500ln-2023-front.svg"
+   "model": "Day-Date 36",
+   "line": "Ref. 1803 · 1978 · Very good · $13,900",
+   "img": "assets/photos/rolex-day-date-1803-1-480.webp"
   },
   {
-   "id": "ap-royal-oak-15500st-2020",
-   "brand": "Audemars Piguet",
-   "model": "Royal Oak Selfwinding 41",
-   "line": "Ref. 15500ST.OO.1220ST.01 · 2020 · Excellent · Price on request",
-   "img": "assets/watches/ap-royal-oak-15500st-2020-front.svg"
-  },
-  {
-   "id": "ap-royal-oak-15510st-2022",
-   "brand": "Audemars Piguet",
-   "model": "Royal Oak Selfwinding 41",
-   "line": "Ref. 15510ST.OO.1320ST.03 · 2022 · Excellent · $58,900",
-   "img": "assets/watches/ap-royal-oak-15510st-2022-front.svg"
-  },
-  {
-   "id": "ap-royal-oak-offshore-26470st-2019",
-   "brand": "Audemars Piguet",
-   "model": "Royal Oak Offshore Chronograph 42",
-   "line": "Ref. 26470ST.OO.A104CR.01 · 2019 · Very good · $31,500",
-   "img": "assets/watches/ap-royal-oak-offshore-26470st-2019-front.svg"
-  },
-  {
-   "id": "patek-nautilus-5711-1a-2019",
+   "id": "patek-nautilus-5711-1a-010",
    "brand": "Patek Philippe",
    "model": "Nautilus",
-   "line": "Ref. 5711/1A-010 · 2019 · Excellent · Price on request",
-   "img": "assets/watches/patek-nautilus-5711-1a-2019-front.svg"
+   "line": "Ref. 5711/1A-010 · 2018 · Excellent · Price on request",
+   "img": "assets/photos/patek-nautilus-5711-1a-010-1-960.webp"
   },
   {
-   "id": "patek-aquanaut-5167a-2021",
-   "brand": "Patek Philippe",
-   "model": "Aquanaut",
-   "line": "Ref. 5167A-001 · 2021 · Excellent · $74,500",
-   "img": "assets/watches/patek-aquanaut-5167a-2021-front.svg"
-  },
-  {
-   "id": "patek-calatrava-5227g-2016",
+   "id": "patek-calatrava-3919g",
    "brand": "Patek Philippe",
    "model": "Calatrava",
-   "line": "Ref. 5227G-001 · 2016 · Very good · $26,500",
-   "img": "assets/watches/patek-calatrava-5227g-2016-front.svg"
+   "line": "Ref. 3919G · 1993 · Very good · $15,500",
+   "img": "assets/photos/patek-calatrava-3919g-1-960.webp"
   },
   {
-   "id": "omega-speedmaster-310-30-42-50-01-001-2022",
+   "id": "ap-royal-oak-15202st",
+   "brand": "Audemars Piguet",
+   "model": "Royal Oak \"Jumbo\" Extra-Thin",
+   "line": "Ref. 15202ST · 2015 · Excellent · Price on request",
+   "img": "assets/photos/ap-royal-oak-15202st-1-1600.webp"
+  },
+  {
+   "id": "ap-royal-oak-chronograph-25860st",
+   "brand": "Audemars Piguet",
+   "model": "Royal Oak Chronograph",
+   "line": "Ref. 25860ST · 2004 · Very good · $28,500",
+   "img": "assets/photos/ap-royal-oak-chronograph-25860st-1-960.webp"
+  },
+  {
+   "id": "ap-royal-oak-offshore-diver-15720st",
+   "brand": "Audemars Piguet",
+   "model": "Royal Oak Offshore Diver",
+   "line": "Ref. 15720ST · 2021 · Excellent · $27,900",
+   "img": "assets/photos/ap-royal-oak-offshore-diver-15720st-1-960.webp"
+  },
+  {
+   "id": "omega-speedmaster-145-012-67",
    "brand": "Omega",
-   "model": "Speedmaster Moonwatch Professional",
-   "line": "Ref. 310.30.42.50.01.001 · 2022 · Excellent · $6,350",
-   "img": "assets/watches/omega-speedmaster-310-30-42-50-01-001-2022-front.svg"
+   "model": "Speedmaster Professional \"Pre-Moon\"",
+   "line": "Ref. 145.012-67 · 1967 · Good · $11,500",
+   "img": "assets/photos/omega-speedmaster-145-012-67-1-1600.webp"
   },
   {
-   "id": "omega-seamaster-300m-210-30-42-20-03-001-2021",
+   "id": "omega-seamaster-chrono-diver-2225-80",
    "brand": "Omega",
-   "model": "Seamaster Diver 300M",
-   "line": "Ref. 210.30.42.20.03.001 · 2021 · Very good · $4,400",
-   "img": "assets/watches/omega-seamaster-300m-210-30-42-20-03-001-2021-front.svg"
+   "model": "Seamaster 300M Chrono Diver",
+   "line": "Ref. 2225.80.00 · 2003 · Very good · $3,100",
+   "img": "assets/photos/omega-seamaster-chrono-diver-2225-80-1-960.webp"
   },
   {
-   "id": "cartier-santos-wssa0029-2021",
+   "id": "cartier-tank-solo-xl-3800",
    "brand": "Cartier",
-   "model": "Santos de Cartier Large",
-   "line": "Ref. WSSA0029 · 2021 · Excellent · $6,900",
-   "img": "assets/watches/cartier-santos-wssa0029-2021-front.svg"
+   "model": "Tank Solo XL",
+   "line": "Ref. 3800 · 2017 · Excellent · $3,350",
+   "img": "assets/photos/cartier-tank-solo-xl-3800-1-480.webp"
   },
   {
-   "id": "tudor-black-bay-58-m79030n-2020",
+   "id": "tudor-black-bay-58-18k-m79018v",
    "brand": "Tudor",
-   "model": "Black Bay Fifty-Eight",
-   "line": "Ref. M79030N-0001 · 2020 · Very good · $3,450",
-   "img": "assets/watches/tudor-black-bay-58-m79030n-2020-front.svg"
+   "model": "Black Bay Fifty-Eight 18K",
+   "line": "Ref. M79018V · 2022 · Excellent · $27,500",
+   "img": "assets/photos/tudor-black-bay-58-18k-m79018v-1-960.webp"
+  },
+  {
+   "id": "tudor-black-bay-54-m79000n",
+   "brand": "Tudor",
+   "model": "Black Bay 54",
+   "line": "Ref. M79000N-0001 · 2023 · Unworn · $3,650",
+   "img": "assets/photos/tudor-black-bay-54-m79000n-1-480.webp"
+  },
+  {
+   "id": "grand-seiko-sbga011-snowflake",
+   "brand": "Grand Seiko",
+   "model": "Spring Drive \"Snowflake\"",
+   "line": "Ref. SBGA011 · 2016 · Excellent · $5,200",
+   "img": "assets/photos/grand-seiko-sbga011-snowflake-1-1600.webp"
   }
  ]
 }
